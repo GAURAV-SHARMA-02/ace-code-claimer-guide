@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ace Code Claimer – Quick & Detailed Setup Guide</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .language-select {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      background: #161b22;
+      padding: 12px 18px;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+    }
+
+    .language-select select {
+      background: #21262d;
+      color: #f0f6fc;
+      border: 1px solid #30363d;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    main {
+      background: #161b22;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #30363d;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      color: #f0f6fc;
+      font-size: 2em;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #21262d;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      color: #f0f6fc;
+      font-size: 1.5em;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #f0f6fc;
+      font-size: 1.2em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      color: #e6edf3;
+      font-size: 1.05em;
+      margin-top: 15px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul, ol {
+      margin-bottom: 15px;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    code {
+      background: #21262d;
+      color: #f0f6fc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+
+    .quick-setup {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-left: 4px solid #238636;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #30363d;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #21262d;
+      color: #f0f6fc;
+    }
+
+    tr:nth-child(even) {
+      background-color: #0d1117;
+    }
+
+    figure {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    figure img, figure iframe {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+    }
+
+    figcaption {
+      color: #8b949e;
+      font-size: 0.9em;
+      margin-top: 8px;
+    }
+
+    .tip {
+      background: #092540;
+      border: 1px solid #1f6feb;
+      border-left: 4px solid #1f6feb;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+
+    .note {
+      background: #261a08;
+      border: 1px solid #9e6a03;
+      border-left: 4px solid #d29922;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      main {
+        padding: 15px;
+      }
+      iframe {
+        width: 100%;
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Language Dropdown -->
+  <div class="language-select">
+    <label for="langSelect" style="font-weight: bold;" data-tkey="selectLanguageLabel">Select Language:</label>
+    <select id="langSelect">
+      <option value="en">🇬🇧 English</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="tr">🇹🇷 Türkçe</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="ko">🇰🇷 한국어</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ar">🇦🇳 العربية</option>
+      <option value="vi">🇻🇳 Tiếng Việt</option>
+      <option value="id">🇮🇩 Bahasa Indonesia</option>
+      <option value="hi">🇮🇳 हिन्दी</option>
+    </select>
+  </div>
+
+<main>
+  <h1 data-tkey="h1Title">Ace Code Claimer</h1>
+  <p data-tkey="introParagraph">A convenient userscript that automatically claims bonus codes on Stake.com. 
+      This guide offers a <em>Quick Setup</em> (for users familiar with Tampermonkey) 
+      and a <em>Detailed Setup</em> below. Even if you’re new to this, 
+      following the steps carefully will only take a few minutes.</p>
+  
+  <!-- Quick Setup -->
+  <div class="quick-setup">
+    <h2 data-tkey="quickSetupTitle">Quick Setup (Fast Instructions)</h2>
+    <ol>
+      <li data-tkey="qsStep1">Install <strong>Tampermonkey</strong> in your browser. 
+      (<a href="#detail-tampermonkey">Detailed guide</a>)</li>
+      <li data-tkey="qsStep2">Enable <strong>Developer Mode</strong> (if Chrome/Edge requires it).
+      (<a href="#detail-developer-mode">Detailed steps</a>)</li>
+      <li data-tkey="qsStep3">Click the script link: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      Tampermonkey will open an install dialog; click <em>Install</em>.</li>
+      <li data-tkey="qsStep4"><strong>Restart your browser.</strong> Then visit 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>.</li>
+      <li data-tkey="qsStep5"><strong>Connect &amp; Auto-Claim:</strong> When the page loads, look for the “Connect” button 
+      injected by the script. Click it (if it doesn't auto-connect). Enjoy automated code claiming!</li>
+    </ol>
+    <p data-tkey="qsNote"><em>If any of these steps are unclear, or if you prefer a more thorough explanation, 
+      see the <strong>detailed instructions</strong> below.</em></p>
+  </div>
+
+  <!-- Introduction (Shortened) -->
+  <h2 id="introduction" data-tkey="introTitle">Introduction</h2>
+  <p data-tkey="introDetail"><strong>Ace Code Claimer</strong> is a small program (a “userscript”) 
+      that runs inside your browser via Tampermonkey. When you visit Stake.com, 
+      it watches for bonus codes and automatically redeems them—often faster than any human could. 
+      This lets you collect daily/weekly or promotional drops with minimal effort.</p>
+
+  <!-- System Requirements in Table -->
+  <h2 data-tkey="sysReqTitle">System Requirements</h2>
+  <table>
+    <thead>
+      <tr>
+        <th data-tkey="sysReqHeaderReq">Requirement</th>
+        <th data-tkey="sysReqHeaderDetails">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-tkey="sysReqDesktopTitle">Desktop/Laptop Computer</td>
+        <td data-tkey="sysReqDesktopDesc">Windows, macOS, or Linux are supported. (Not designed for mobile/tablet.)</td>
+      </tr>
+      <tr>
+        <td data-tkey="sysReqBrowserTitle">Browser</td>
+        <td data-tkey="sysReqBrowserDesc">Chrome, Edge, Firefox, Opera, or Safari (latest versions recommended).</td>
+      </tr>
+      <tr>
+        <td data-tkey="sysReqTMTitle">Tampermonkey Extension</td>
+        <td data-tkey="sysReqTMDesc">Required to run the userscript. See detailed install steps below.</td>
+      </tr>
+      <tr>
+        <td data-tkey="sysReqNetTitle">Stable Internet</td>
+        <td data-tkey="sysReqNetDesc">WebSocket connection is crucial for fast claiming.</td>
+      </tr>
+      <tr>
+        <td data-tkey="sysReqStakeTitle">Stake.com Account</td>
+        <td data-tkey="sysReqStakeDesc">You must be logged in on Stake.com for claims to succeed.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Detailed Steps for Tampermonkey -->
+  <h2 id="detail-tampermonkey" data-tkey="detailInstrTitle">Detailed Instructions</h2>
+  <h3 data-tkey="detailStep1">1. Install Tampermonkey</h3>
+  <p data-tkey="detailStep1Desc">If you already have Tampermonkey installed and know how it works, 
+      you can skip down to the <a href="#detail-developer-mode">Developer Mode</a> step if needed. 
+      Otherwise, follow these instructions for your browser of choice:</p>
+
+  <figure>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8tyjJD65zws?si=YxB9ptpVCZ-v7oWW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+    </iframe>
+    <figcaption data-tkey="figTampermonkey">Figure: Installing Tampermonkey</figcaption>
+  </figure>
+
+  <h4 data-tkey="chromeSubTitle">Chrome</h4>
+  <ol>
+    <li data-tkey="chromeStep1">Go to the <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">Chrome Web Store link</a> for Tampermonkey.</li>
+    <li data-tkey="chromeStep2">Click <em>Add to Chrome</em>, then confirm by clicking <em>Add extension</em>.</li>
+    <li data-tkey="chromeStep3">Once installed, an icon (black square with two white circles) appears in the top-right corner.</li>
+  </ol>
+
+  <h4 data-tkey="edgeSubTitle">Edge</h4>
+  <ol>
+    <li data-tkey="edgeStep1">Go to <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd" target="_blank" rel="noopener">Tampermonkey in the Edge Add-ons</a>.</li>
+    <li data-tkey="edgeStep2">Click <em>Get</em> or <em>Add</em>, then allow the installation.</li>
+    <li data-tkey="edgeStep3">After installation, confirm Tampermonkey is active (top-right puzzle icon if hidden).</li>
+  </ol>
+
+  <h4 data-tkey="firefoxSubTitle">Firefox</h4>
+  <ol>
+    <li data-tkey="firefoxStep1">Open the <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/" target="_blank" rel="noopener">Tampermonkey Add-on page</a>.</li>
+    <li data-tkey="firefoxStep2">Click <em>Add to Firefox</em>, then <em>Add</em> in the prompt.</li>
+    <li data-tkey="firefoxStep3">Once installed, the Tampermonkey icon will appear. If not, check the Add-ons menu.</li>
+  </ol>
+
+  <!-- Developer Mode -->
+  <h3 id="detail-developer-mode" data-tkey="detailStep2">2. Enable Developer Mode</h3>
+  <p data-tkey="detailStep2Desc">Some Chromium-based browsers (Chrome, Edge, Opera) might require Developer Mode 
+      to install userscripts from external URLs:</p>
+  <ul>
+    <li data-tkey="detailStep2UL1">In Chrome/Brave/Opera, go to <code>chrome://extensions</code> 
+      and toggle <strong>Developer mode</strong> on (top-right corner).</li>
+    <li data-tkey="detailStep2UL2">In Edge, go to <code>edge://extensions</code>, enable <strong>Developer mode</strong> (bottom-left),
+      and allow other store extensions if prompted.</li>
+    <li data-tkey="detailStep2UL3">Firefox does not require Developer Mode for Tampermonkey or userscripts.</li>
+    <li data-tkey="detailStep2UL4">While still on the <code>chrome://extensions</code> (or similar) page, locate <strong>Tampermonkey</strong>, click <em>Details</em>, and toggle&nbsp;<strong>Allow User Scripts</strong>&nbsp;to on.</li>
+  </ul>
+
+  <figure>
+    <img src="https://storage.googleapis.com/acc_code_claimer/devmode.png" alt="Chrome developer mode">
+    <figcaption data-tkey="figDevMode">Figure: Enabling Developer Mode on Chrome</figcaption>
+  </figure>
+
+  <figure>
+    <img src="https://storage.googleapis.com/acc_code_claimer/allow10.png" alt="Enable Allow User Scripts in Tampermonkey">
+    <figcaption data-tkey="figAllowUserScripts">Figure: Enabling "Allow User Scripts" in Tampermonkey</figcaption>
+  </figure>
+
+  <!-- Installing Userscript -->
+  <h3 data-tkey="detailStep3">3. Install the Ace Code Claimer Script</h3>
+  <ol>
+    <li data-tkey="detailStep3Li1">Click this link: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>. Tampermonkey should open an “Install script” dialog.</li>
+    <li data-tkey="detailStep3Li2">Review the script info (name, version, domains) and click <em>Install</em>.</li>
+    <li data-tkey="detailStep3Li3">After installation, check that Ace Code Claimer” is listed in your Tampermonkey dashboard.</li>
+  </ol>
+
+  <figure>
+    <img src="https://storage.googleapis.com/acc_code_claimer/installingtemp.png" alt="Tampermonkey install dialog">
+    <figcaption data-tkey="figTMInstall">Figure: The Tampermonkey install prompt</figcaption>
+  </figure>
+
+  <!-- Restart Browser -->
+  <h3 data-tkey="detailStep4">4. Restart Your Browser</h3>
+  <p data-tkey="detailStep4Desc">For the best results, close all browser windows and reopen so that 
+      Tampermonkey and the new script load completely.</p>
+
+  <!-- Launch Stake -->
+  <h3 data-tkey="detailStep5">5. Open Stake.com</h3>
+  <ol>
+    <li data-tkey="detailStep5Li1">Go to <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>. 
+      Log in to your account.</li>
+    <li data-tkey="detailStep5Li2">The script inserts a small header or panel on the page (usually at the top). 
+      You’ll see a <strong>Connect</strong> button and settings.</li>
+    <li data-tkey="detailStep5Li3">Click <strong>Connect</strong> to link with the code-claim server. Once the status is 
+      <strong>Connected</strong>, you’re ready to auto-claim codes.</li>
+  </ol>
+
+  <h2 data-tkey="howItWorksTitle">How It Works</h2>
+  <p data-tkey="howItWorksDesc">Once connected, the script automatically redeems drop codes that come through its WebSocket. 
+      If a valid code is announced, the script instantly requests it on your behalf...</p>
+
+  <figure>
+    <img src="https://storage.googleapis.com/acc_code_claimer/interface.png" alt="Ace Code Claimer UI Example">
+    <figcaption data-tkey="figInterface">Figure: Ace Code Claimer interface on Stake.com</figcaption>
+  </figure>
+
+  <!-- Tips and Warnings -->
+  <div class="tip">
+    <strong data-tkey="tipTitle">Tip:</strong> 
+    <span data-tkey="tipDesc">Many bonus codes have limited usage (e.g., first 1000 redeems). 
+      Even with an auto-claimer, codes can run out instantly. A stable internet connection helps.</span>
+  </div>
+
+  <!-- Troubleshooting Highlight -->
+  <h2 data-tkey="troubleTitle">Troubleshooting &amp; Advanced Tips</h2>
+
+  <div class="note">
+    <strong data-tkey="prob1Title">Problem:</strong>
+    <span data-tkey="prob1Desc">The script doesn’t appear or won’t connect.</span>
+    <br>
+    <strong data-tkey="fix1Title">Fix:</strong>
+    <span data-tkey="fix1Desc">Ensure Tampermonkey is active. Check your firewall/VPN. Try another browser or disable 
+      “Sleep Tabs” (Chrome Memory Saver/Edge Sleeping Tabs).</span>
+  </div>
+
+  <div class="note">
+    <strong data-tkey="prob2Title">Problem:</strong>
+    <span data-tkey="prob2Desc">Getting frequent Cloudflare Turnstile CAPTCHAs.</span>
+    <br>
+    <strong data-tkey="fix2Title">Fix:</strong>
+    <span data-tkey="fix2Desc">Solve the captcha to continue. If it persists, your IP or region might be flagged. 
+      Switching servers or normal play can reduce it.</span>
+  </div>
+
+  <div class="note">
+    <strong data-tkey="prob3Title">Problem:</strong>
+    <span data-tkey="prob3Desc">“Subscription expired” or “Banned” message.</span>
+    <br>
+    <strong data-tkey="fix3Title">Fix:</strong>
+    <span data-tkey="fix3Desc">Possibly your account is restricted on the script’s server or Stake’s side. 
+      Contact the script provider or Stake support if you believe it’s a mistake.</span>
+  </div>
+
+  <h4 data-tkey="recommendedSettingsTitle">Recommended Browser Settings</h4>
+  <ul>
+    <li data-tkey="recommendedSettingsLi1">Exclude Stake.com from Chrome Memory Saver (<code>chrome://settings/performance</code>) 
+      or Edge Sleeping Tabs (<em>Settings &gt; System and Performance</em>).</li>
+    <li data-tkey="recommendedSettingsLi2">Consider using Cloudflare DNS (1.1.1.1) for potentially faster name lookups.</li>
+    <li data-tkey="recommendedSettingsLi3">Try to keep only one Stake.com tab with the script running to avoid conflicts.</li>
+  </ul>
+
+  <p data-tkey="finalNote">Enjoy auto-claiming bonus codes! If you need further help, consult the developer’s official 
+      Telegram or support channel.</p>
+</main>
+
+<script>
+/**
+ * Translation map for each text key in all supported languages,
+ * now including <a> tags (anchors) and HTML within the strings.
+ * We'll use innerHTML to preserve those tags as clickable links.
+ */
+const translations = {
+  /* ===================
+     1) ENGLISH (DEFAULT)
+     =================== */
+  en: {
+    pageTitle: "Ace Code Claimer – Quick & Detailed Setup Guide",
+    selectLanguageLabel: "Select Language:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `A convenient userscript that automatically claims bonus codes on Stake.com. 
+      This guide offers a <em>Quick Setup</em> (for users familiar with Tampermonkey) 
+      and a <em>Detailed Setup</em> below. Even if you’re new to this, 
+      following the steps carefully will only take a few minutes.`,
+    quickSetupTitle: "Quick Setup (Fast Instructions)",
+    qsStep1: `Install <strong>Tampermonkey</strong> in your browser. 
+      (<a href="#detail-tampermonkey">Detailed guide</a>)`,
+    qsStep2: `Enable <strong>Developer Mode</strong> (if Chrome/Edge requires it).
+      (<a href="#detail-developer-mode">Detailed steps</a>)`,
+    qsStep3: `Click the script link: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      Tampermonkey will open an install dialog; click <em>Install</em>.`,
+    qsStep4: `<strong>Restart your browser.</strong> Then visit 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>.`,
+    qsStep5: `<strong>Connect & Auto-Claim:</strong> When the page loads, look for the “Connect” button 
+      injected by the script. Click it (if it doesn't auto-connect). Enjoy automated code claiming!`,
+    qsNote: `<em>If any of these steps are unclear, or if you prefer a more thorough explanation, 
+      see the <strong>detailed instructions</strong> below.</em>`,
+    introTitle: "Introduction",
+    introDetail: `<strong>Ace Code Claimer</strong> is a small program (a “userscript”) 
+      that runs inside your browser via Tampermonkey. When you visit Stake.com, 
+      it watches for bonus codes and automatically redeems them—often faster than any human could. 
+      This lets you collect daily/weekly or promotional drops with minimal effort.`,
+    sysReqTitle: "System Requirements",
+    sysReqHeaderReq: "Requirement",
+    sysReqHeaderDetails: "Details",
+    sysReqDesktopTitle: "Desktop/Laptop Computer",
+    sysReqDesktopDesc: "Windows, macOS, or Linux are supported. (Not designed for mobile/tablet.)",
+    sysReqBrowserTitle: "Browser",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, or Safari (latest versions recommended).",
+    sysReqTMTitle: "Tampermonkey Extension",
+    sysReqTMDesc: "Required to run the userscript. See detailed install steps below.",
+    sysReqNetTitle: "Stable Internet",
+    sysReqNetDesc: "WebSocket connection is crucial for fast claiming.",
+    sysReqStakeTitle: "Stake.com Account",
+    sysReqStakeDesc: "You must be logged in on Stake.com for claims to succeed.",
+    detailInstrTitle: "Detailed Instructions",
+    detailStep1: "1. Install Tampermonkey",
+    detailStep1Desc: `If you already have Tampermonkey installed and know how it works, 
+      you can skip down to the <a href="#detail-developer-mode">Developer Mode</a> step if needed. 
+      Otherwise, follow these instructions for your browser of choice:`,
+    figTampermonkey: "Figure: Installing Tampermonkey",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `Go to the <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chrome Web Store link</a> for Tampermonkey.`,
+    chromeStep2: "Click <em>Add to Chrome</em>, then confirm by clicking <em>Add extension</em>.",
+    chromeStep3: "Once installed, an icon (black square with two white circles) appears in the top-right corner.",
+    edgeSubTitle: "Edge",
+    edgeStep1: `Go to <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd" 
+      target="_blank" rel="noopener">Tampermonkey in the Edge Add-ons</a>.`,
+    edgeStep2: "Click <em>Get</em> or <em>Add</em>, then allow the installation.",
+    edgeStep3: "After installation, confirm Tampermonkey is active (top-right puzzle icon if hidden).",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `Open the <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/" 
+      target="_blank" rel="noopener">Tampermonkey Add-on page</a>.`,
+    firefoxStep2: "Click <em>Add to Firefox</em>, then <em>Add</em> in the prompt.",
+    firefoxStep3: "Once installed, the Tampermonkey icon will appear. If not, check the Add-ons menu.",
+    detailStep2: "2. Enable Developer Mode",
+    detailStep2Desc: `Some Chromium-based browsers (Chrome, Edge, Opera) might require Developer Mode 
+      to install userscripts from external URLs:`,
+    detailStep2UL1: `In Chrome/Brave/Opera, go to <code>chrome://extensions</code> 
+      and toggle <strong>Developer mode</strong> on (top-right corner).`,
+    detailStep2UL2: `In Edge, go to <code>edge://extensions</code>, enable <strong>Developer mode</strong> (bottom-left),
+      and allow other store extensions if prompted.`,
+    detailStep2UL3: "Firefox does not require Developer Mode for Tampermonkey or userscripts.",
+    figDevMode: "Figure: Enabling Developer Mode on Chrome",
+    detailStep3: "3. Install the Ace Code Claimer Script",
+    detailStep3Li1: `Click this link: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>. Tampermonkey should open an “Install script” dialog.`,
+    detailStep3Li2: "Review the script info (name, version, domains) and click <em>Install</em>.",
+    detailStep3Li3: `After installation, check that Ace Code Claimer” is listed in your Tampermonkey dashboard.`,
+    figTMInstall: "Figure: The Tampermonkey install prompt",
+    detailStep4: "4. Restart Your Browser",
+    detailStep4Desc: `For the best results, close all browser windows and reopen so that 
+      Tampermonkey and the new script load completely.`,
+    detailStep5: "5. Open Stake.com",
+    detailStep5Li1: `Go to <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>. 
+      Log in to your account.`,
+    detailStep5Li2: `The script inserts a small header or panel on the page (usually at the top). 
+      You’ll see a <strong>Connect</strong> button and settings.`,
+    detailStep5Li3: `Click <strong>Connect</strong> to link with the code-claim server. Once the status is 
+      <strong>Connected</strong>, you’re ready to auto-claim codes.`,
+    howItWorksTitle: "How It Works",
+    howItWorksDesc: `Once connected, the script automatically redeems drop codes that come through its WebSocket. 
+      If a valid code is announced, the script instantly requests it on your behalf...`,
+    figInterface: "Figure: Ace Code Claimer interface on Stake.com",
+    tipTitle: "Tip:",
+    tipDesc: `Many bonus codes have limited usage (e.g., first 1000 redeems). 
+      Even with an auto-claimer, codes can run out instantly. A stable internet connection helps.`,
+    troubleTitle: "Troubleshooting & Advanced Tips",
+    prob1Title: "Problem:",
+    prob1Desc: `The script doesn’t appear or won’t connect.`,
+    fix1Title: "Fix:",
+    fix1Desc: `Ensure Tampermonkey is active. Check your firewall/VPN. Try another browser or disable 
+      “Sleep Tabs” (Chrome Memory Saver/Edge Sleeping Tabs).`,
+    prob2Title: "Problem:",
+    prob2Desc: "Getting frequent Cloudflare Turnstile CAPTCHAs.",
+    fix2Title: "Fix:",
+    fix2Desc: `Solve the captcha to continue. If it persists, your IP or region might be flagged. 
+      Switching servers or normal play can reduce it.`,
+    prob3Title: "Problem:",
+    prob3Desc: "“Subscription expired” or “Banned” message.",
+    fix3Title: "Fix:",
+    fix3Desc: `Possibly your account is restricted on the script’s server or Stake’s side. 
+      Contact the script provider or Stake support if you believe it’s a mistake.`,
+    recommendedSettingsTitle: "Recommended Browser Settings",
+    recommendedSettingsLi1: `Exclude Stake.com from Chrome Memory Saver (<code>chrome://settings/performance</code>) 
+      or Edge Sleeping Tabs (<em>Settings &gt; System and Performance</em>).`,
+    recommendedSettingsLi2: `Consider using Cloudflare DNS (1.1.1.1) for potentially faster name lookups.`,
+    recommendedSettingsLi3: `Try to keep only one Stake.com tab with the script running to avoid conflicts.`,
+    finalNote: `Enjoy auto-claiming bonus codes! If you need further help, consult the developer’s official 
+      Telegram or support channel.`,
+    detailStep2UL4: "While still on the <code>chrome://extensions</code> (or similar) page, locate <strong>Tampermonkey</strong>, click <em>Details</em>, and toggle&nbsp;<strong>Allow User Scripts</strong>&nbsp;to on.",
+    figAllowUserScripts: "Figure: Enabling \"Allow User Scripts\" in Tampermonkey"
+  },
+
+  /* ===========================
+     2) RUSSIAN (RU)
+     =========================== */
+  ru: {
+    pageTitle: "Ace Code Claimer – Краткое и подробное руководство",
+    selectLanguageLabel: "Выберите язык:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `Удобный пользовательский скрипт, автоматически активирующий бонус-коды на Stake.com. 
+      В этом руководстве есть <em>Краткая настройка</em> (для знакомых с Tampermonkey) и 
+      <em>Подробная настройка</em> ниже. Даже если вы новичок, выполнение шагов займет всего несколько минут.`,
+    quickSetupTitle: "Краткая настройка (быстрая инструкция)",
+    qsStep1: `Установите <strong>Tampermonkey</strong> в свой браузер. 
+      (<a href="#detail-tampermonkey">Подробное руководство</a>)`,
+    qsStep2: `Включите <strong>режим разработчика</strong> (если Chrome/Edge требует).
+      (<a href="#detail-developer-mode">Подробные шаги</a>)`,
+    qsStep3: `Нажмите ссылку скрипта:
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>.
+      Tampermonkey откроет диалог установки; нажмите <em>Install</em>.`,
+    qsStep4: `<strong>Перезапустите браузер.</strong> Затем перейдите на 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>.`,
+    qsStep5: `<strong>Подключитесь и авто-активация:</strong> При загрузке страницы ищите кнопку “Connect”. 
+      Нажмите её (если не авто-подключилось). Наслаждайтесь автоматическим получением кодов!`,
+    qsNote: `<em>Если какие-то шаги непонятны, либо нужна более подробная инструкция, 
+      см. <strong>детальные указания</strong> ниже.</em>`,
+    introTitle: "Введение",
+    introDetail: `<strong>Ace Code Claimer</strong> — небольшой “userscript”, 
+      который работает в браузере через Tampermonkey. При посещении Stake.com он отслеживает бонус-коды...`,
+    sysReqTitle: "Системные требования",
+    sysReqHeaderReq: "Требование",
+    sysReqHeaderDetails: "Детали",
+    sysReqDesktopTitle: "Настольный/ноутбук",
+    sysReqDesktopDesc: "Поддерживаются Windows, macOS, Linux. (Не предназначен для мобильных/планшетов).",
+    sysReqBrowserTitle: "Браузер",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, Safari (желательно последние версии).",
+    sysReqTMTitle: "Расширение Tampermonkey",
+    sysReqTMDesc: "Нужно для запуска userscript. См. подробную установку.",
+    sysReqNetTitle: "Стабильный интернет",
+    sysReqNetDesc: "WebSocket соединение критично для быстрой активации.",
+    sysReqStakeTitle: "Аккаунт Stake.com",
+    sysReqStakeDesc: "Нужно войти на Stake.com, чтобы код успешно активировался.",
+    detailInstrTitle: "Подробная инструкция",
+    detailStep1: "1. Установка Tampermonkey",
+    detailStep1Desc: `Если Tampermonkey уже установлен и вы знаете, как он работает, можно перейти сразу к 
+      <a href="#detail-developer-mode">режиму разработчика</a>, если нужно. Иначе следуйте инструкциям ниже:`,
+    figTampermonkey: "Рисунок: Установка Tampermonkey",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `Перейдите по 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">ссылке в Chrome Web Store</a> для Tampermonkey.`,
+    chromeStep2: "Нажмите «Add to Chrome», затем «Add extension».",
+    chromeStep3: "По завершении установки в правом верхнем углу появится иконка (черный квадрат с белыми кругами).",
+    edgeSubTitle: "Edge",
+    edgeStep1: `Откройте 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Tampermonkey в Edge Add-ons</a>.`,
+    edgeStep2: "Нажмите «Get» или «Add», затем разрешите установку.",
+    edgeStep3: "После установки убедитесь, что Tampermonkey активен (иконка пазла сверху).",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `Откройте 
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">страницу Tampermonkey Add-on</a>.`,
+    firefoxStep2: "Нажмите «Add to Firefox», затем «Add» в диалоге.",
+    firefoxStep3: "После установки появится иконка Tampermonkey. Если нет, проверьте раздел расширений.",
+    detailStep2: "2. Режим разработчика",
+    detailStep2Desc: `Некоторые Chromium-браузеры (Chrome, Edge, Opera) требуют включения режима разработчика 
+      для установки скриптов извне:`,
+    detailStep2UL1: `В Chrome/Brave/Opera откройте <code>chrome://extensions</code> 
+      и включите <strong>Developer mode</strong> (справа вверху).`,
+    detailStep2UL2: `В Edge откройте <code>edge://extensions</code>, включите <strong>Developer mode</strong> 
+      (внизу слева) и разрешите прочие store-расширения, если понадобится.`,
+    detailStep2UL3: "Firefox для Tampermonkey/userscript не требует режима разработчика.",
+    figDevMode: "Рисунок: Включение режима разработчика в Chrome",
+    detailStep3: "3. Установка скрипта Ace Code Claimer",
+    detailStep3Li1: `Щелкните ссылку: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>. 
+      Tampermonkey должен открыть окно установки «Install script».`,
+    detailStep3Li2: "Проверьте информацию о скрипте (имя, версия, домены) и нажмите «Install».",
+    detailStep3Li3: "После установки убедитесь, что Ace Code Claimer» значится в Tampermonkey.",
+    figTMInstall: "Рисунок: Окно установки Tampermonkey",
+    detailStep4: "4. Перезапустите ваш браузер",
+    detailStep4Desc: "Чтобы всё загрузилось корректно, закройте все вкладки и запустите браузер заново.",
+    detailStep5: "5. Откройте Stake.com",
+    detailStep5Li1: `Перейдите на <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>. 
+      Авторизуйтесь в своём аккаунте.`,
+    detailStep5Li2: "Скрипт добавляет небольшую панель сверху страницы. Увидите кнопку «Connect».",
+    detailStep5Li3: "Нажмите «Connect» для подключения к серверу. Статус «Connected» означает, что готово.",
+    howItWorksTitle: "Как это работает",
+    howItWorksDesc: `Скрипт через WebSocket автоматически активирует бонус-коды. При появлении нового кода 
+      он делает запрос мгновенно...`,
+    figInterface: "Рисунок: Интерфейс Ace Code Claimer на Stake.com",
+    tipTitle: "Подсказка:",
+    tipDesc: `Многие бонус-коды имеют лимит (например, первые 1000). Даже с авто-кликом они быстро закончатся, 
+      нужен стабильный интернет.`,
+    troubleTitle: "Проблемы и продвинутые советы",
+    prob1Title: "Проблема:",
+    prob1Desc: "Скрипт не отображается или не подключается.",
+    fix1Title: "Решение:",
+    fix1Desc: "Убедитесь, что Tampermonkey включен. Проверьте VPN/фаервол. Возможно, браузер/вкладка «спит».",
+    prob2Title: "Проблема:",
+    prob2Desc: "Частые капчи Cloudflare Turnstile.",
+    fix2Title: "Решение:",
+    fix2Desc: "Решите капчу, чтобы продолжить. При частом повторении — IP может быть отмечен.",
+    prob3Title: "Проблема:",
+    prob3Desc: "«Subscription expired» или «Banned».",
+    fix3Title: "Решение:",
+    fix3Desc: "Возможна блокировка на сервере скрипта или со стороны Stake. Свяжитесь с разработчиком или поддержкой.",
+    recommendedSettingsTitle: "Рекомендуемые настройки",
+    recommendedSettingsLi1: "Исключите Stake.com из Chrome Memory Saver/Edge Sleeping Tabs.",
+    recommendedSettingsLi2: "Рассмотрите DNS Cloudflare (1.1.1.1) для быстрого DNS.",
+    recommendedSettingsLi3: "Не открывайте несколько вкладок Stake.com с одним скриптом.",
+    finalNote: "Наслаждайтесь автоматическим получением кодов! Для помощи — свяжитесь с автором или поддержкой.",
+    detailStep2UL4: "На той же странице расширений найдите <strong>Tampermonkey</strong>, нажмите <em>Details</em> и включите&nbsp;<strong>Allow User Scripts</strong>.",
+    figAllowUserScripts: "Рисунок: Включение «Allow User Scripts» в Tampermonkey"
+  },
+
+  /* ===========================
+     3) GERMAN (DE)
+     =========================== */
+  de: {
+    pageTitle: "Ace Code Claimer – Schnelle & ausführliche Installationsanleitung",
+    selectLanguageLabel: "Sprache auswählen:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `Ein praktisches Userscript, das Bonus-Codes auf Stake.com automatisch einlöst. 
+      Diese Anleitung bietet eine <em>Schnelle Einrichtung</em> (für Tampermonkey-Kenner) 
+      und eine <em>Ausführliche Einrichtung</em> unten. Selbst Neueinsteiger brauchen meist nur wenige Minuten.`,
+    quickSetupTitle: "Schnelle Einrichtung (Kurzanleitung)",
+    qsStep1: `Installieren Sie <strong>Tampermonkey</strong> in Ihrem Browser. 
+      (<a href="#detail-tampermonkey">Ausführliche Anleitung</a>)`,
+    qsStep2: `Aktivieren Sie den <strong>Entwicklermodus</strong> (falls Chrome/Edge es erfordert).
+      (<a href="#detail-developer-mode">Ausführliche Schritte</a>)`,
+    qsStep3: `Klicken Sie auf den Skript-Link: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>.
+      Tampermonkey öffnet einen Installationsdialog; klicken Sie auf <em>Install</em>.`,
+    qsStep4: `<strong>Starten Sie Ihren Browser neu.</strong> Besuchen Sie dann 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>.`,
+    qsStep5: `<strong>Verbinden & Automatisch Einlösen:</strong> Nach dem Laden der Seite suchen Sie den 
+      „Connect“-Button vom Script. Klicken Sie ihn (falls keine Autoverbindung). Viel Spaß beim automatischen Einlösen!`,
+    qsNote: `<em>Wenn etwas unklar ist, oder Sie eine ausführlichere Erklärung wünschen, 
+      lesen Sie die <strong>ausführlichen Anweisungen</strong> unten.</em>`,
+    introTitle: "Einführung",
+    introDetail: `<strong>Ace Code Claimer</strong> ist ein kleines Programm (ein “Userscript”), 
+      das über Tampermonkey in Ihrem Browser läuft. Beim Besuch von Stake.com erkennt es Bonus-Codes...`,
+    sysReqTitle: "Systemanforderungen",
+    sysReqHeaderReq: "Anforderung",
+    sysReqHeaderDetails: "Details",
+    sysReqDesktopTitle: "Desktop-/Laptop-Computer",
+    sysReqDesktopDesc: "Unterstützt Windows, macOS, Linux. (Nicht für Mobil/Tablet.)",
+    sysReqBrowserTitle: "Browser",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, Safari (aktuelle Versionen empfohlen).",
+    sysReqTMTitle: "Tampermonkey-Erweiterung",
+    sysReqTMDesc: "Erforderlich für Userscript. Siehe detaillierte Installation.",
+    sysReqNetTitle: "Stabile Internetverbindung",
+    sysReqNetDesc: "Eine WebSocket-Verbindung ist wichtig für schnelles Einlösen.",
+    sysReqStakeTitle: "Stake.com-Konto",
+    sysReqStakeDesc: "Sie müssen bei Stake.com eingeloggt sein, um Codes erfolgreich einzulösen.",
+    detailInstrTitle: "Ausführliche Anleitung",
+    detailStep1: "1. Tampermonkey installieren",
+    detailStep1Desc: `Wenn Tampermonkey bereits installiert ist und Sie es kennen, 
+      können Sie ggf. direkt zum <a href="#detail-developer-mode">Entwicklermodus</a>-Schritt gehen. Sonst:`,
+    figTampermonkey: "Abbildung: Installation von Tampermonkey",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `Öffnen Sie den 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chrome Web Store</a> für Tampermonkey.`,
+    chromeStep2: "Klicken Sie auf „Zu Chrome hinzufügen“, dann „Erweiterung hinzufügen“ zur Bestätigung.",
+    chromeStep3: "Nach Installation erscheint oben rechts ein Symbol (schwarzes Quadrat mit zwei weißen Kreisen).",
+    edgeSubTitle: "Edge",
+    edgeStep1: `Öffnen Sie 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Tampermonkey im Edge Add-ons-Store</a>.`,
+    edgeStep2: "Klicken Sie „Abrufen“ oder „Hinzufügen“ und erlauben Sie die Installation.",
+    edgeStep3: "Stellen Sie sicher, dass Tampermonkey aktiv ist (Puzzle-Icon oben rechts).",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `Öffnen Sie die 
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">Tampermonkey Add-on Seite</a>.`,
+    firefoxStep2: "Klicken Sie „Add to Firefox“, dann „Add“ im Dialog.",
+    firefoxStep3: "Nach Installation erscheint das Tampermonkey-Symbol. Wenn nicht, prüfen Sie das Add-ons-Menü.",
+    detailStep2: "2. Entwicklermodus aktivieren",
+    detailStep2Desc: `Manche Chromium-Browser (Chrome, Edge, Opera) benötigen ggf. Entwickler-Modus 
+      zum Installieren externer Userscripts:`,
+    detailStep2UL1: `Chrome/Brave/Opera: <code>chrome://extensions</code> aufrufen, 
+      <strong>Developer mode</strong> (oben rechts) einschalten.`,
+    detailStep2UL2: `Edge: <code>edge://extensions</code>, 
+      <strong>Developer mode</strong> (links unten) aktivieren, andere Store-Add-ons erlauben.`,
+    detailStep2UL3: "Firefox: kein Entwicklermodus nötig.",
+    figDevMode: "Abbildung: Entwicklermodus in Chrome aktivieren",
+    detailStep3: "3. Ace Code Claimer Script installieren",
+    detailStep3Li1: `Klicken Sie auf:
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>. 
+      Tampermonkey öffnet den „Script installieren“-Dialog.`,
+    detailStep3Li2: "Überprüfen Sie die Skriptinformationen (Name, Version, Domains) und klicken Sie „Install“.",
+    detailStep3Li3: "Danach stellen Sie sicher, dass Ace Code Claimer“ in Tampermonkey aufgelistet ist.",
+    figTMInstall: "Abbildung: Tampermonkey Installationsdialog",
+    detailStep4: "4. Browser neu starten",
+    detailStep4Desc: "Schließen Sie alle Browserfenster und öffnen Sie neu, damit alles vollständig geladen wird.",
+    detailStep5: "5. Stake.com öffnen",
+    detailStep5Li1: `Besuchen Sie <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>. 
+      Melden Sie sich an.`,
+    detailStep5Li2: "Das Skript fügt eine kleine Leiste hinzu (meist oben). Dort sehen Sie „Connect“ & Einstellungen.",
+    detailStep5Li3: "Klicken Sie „Connect“, um den Code-Server zu verbinden. Status „Connected“ => aut. Einlösen bereit.",
+    howItWorksTitle: "Funktionsweise",
+    howItWorksDesc: `Sobald verbunden, löst das Skript alle eingehenden Drop-Codes via WebSocket automatisch ein. 
+      Bei gültigem Code wird er sofort beansprucht...`,
+    figInterface: "Abbildung: Ace Code Claimer Oberfläche",
+    tipTitle: "Tipp:",
+    tipDesc: `Viele Bonus-Codes haben begrenzte Einlösungen (z.B. erste 1000). Auch mit Auto-Einlösung können sie 
+      sofort vergriffen sein. Gute Verbindung & niedrige Latenz helfen.`,
+    troubleTitle: "Fehlersuche & Erweiterte Tipps",
+    prob1Title: "Problem:",
+    prob1Desc: "Skript erscheint nicht oder verbindet nicht.",
+    fix1Title: "Lösung:",
+    fix1Desc: "Stellen Sie sicher, dass Tampermonkey aktiv ist. Firewall/VPN prüfen. Anderen Browser testen.",
+    prob2Title: "Problem:",
+    prob2Desc: "Häufige Cloudflare Turnstile CAPTCHAs.",
+    fix2Title: "Lösung:",
+    fix2Desc: "Lösen Sie das CAPTCHA. Wenn es oft passiert, könnte Ihre IP markiert sein.",
+    prob3Title: "Problem:",
+    prob3Desc: "„Subscription expired“ oder „Banned“ Meldung.",
+    fix3Title: "Lösung:",
+    fix3Desc: "Möglicherweise Konto-Einschränkung. Kontaktieren Sie den Skript-Anbieter oder Stake-Support.",
+    recommendedSettingsTitle: "Empfohlene Browsereinstellungen",
+    recommendedSettingsLi1: "Schließen Sie Stake.com vom Chrome Memory Saver/Edge Sleeping Tabs aus.",
+    recommendedSettingsLi2: "Nutzen Sie Cloudflare DNS (1.1.1.1) für schnellere DNS-Abfragen.",
+    recommendedSettingsLi3: "Öffnen Sie möglichst nur einen Stake.com Tab mit dem Skript.",
+    finalNote: "Viel Spaß beim automatischen Einlösen! Weitere Hilfe: offizieller Telegram oder Support-Kanal.",
+    detailStep2UL4: "Bleiben Sie auf der Erweiterungsseite, suchen Sie <strong>Tampermonkey</strong>, klicken Sie auf <em>Details</em> und schalten Sie&nbsp;<strong>Allow User Scripts</strong>&nbsp;ein.",
+    figAllowUserScripts: "Abbildung: „Allow User Scripts“ in Tampermonkey aktivieren"
+  },
+
+  /* ===========================
+     4) FRENCH (FR)
+     =========================== */
+  fr: {
+    pageTitle: "Ace Code Claimer – Guide d’installation rapide et détaillé",
+    selectLanguageLabel: "Choisir la langue :",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `Un userscript pratique qui réclame automatiquement les codes bonus sur Stake.com. 
+      Ce guide propose un <em>réglage rapide</em> (pour ceux qui connaissent Tampermonkey) 
+      et un <em>réglage détaillé</em> ci-dessous. Même si vous êtes novice, quelques minutes suffisent en suivant les étapes.`,
+    quickSetupTitle: "Configuration rapide (Instructions courtes)",
+    qsStep1: `Installez <strong>Tampermonkey</strong> dans votre navigateur. 
+      (<a href="#detail-tampermonkey">Guide détaillé</a>)`,
+    qsStep2: `Activez le <strong>mode développeur</strong> (si Chrome/Edge le requiert).
+      (<a href="#detail-developer-mode">Étapes détaillées</a>)`,
+    qsStep3: `Cliquez sur le lien du script : 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>.
+      Tampermonkey ouvrira une boîte d’installation; cliquez sur <em>Installer</em>.`,
+    qsStep4: `<strong>Redémarrez votre navigateur</strong>. Puis rendez-vous sur 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>.`,
+    qsStep5: `<strong>Connecter & Réclamation auto :</strong> À l’ouverture de la page, trouvez le bouton “Connect” 
+      injecté par le script. Cliquez si nécessaire. Profitez de la réclamation automatique !`,
+    qsNote: `<em>Si certains points ne sont pas clairs, ou si vous préférez un tutoriel plus complet, 
+      voir <strong>les instructions détaillées</strong> ci-dessous.</em>`,
+    introTitle: "Introduction",
+    introDetail: `<strong>Ace Code Claimer</strong> est un petit programme (un “userscript”) 
+      qui fonctionne via Tampermonkey dans votre navigateur. Lors de votre visite sur Stake.com, 
+      il détecte et réclame automatiquement les codes bonus...`,
+    sysReqTitle: "Configuration requise",
+    sysReqHeaderReq: "Exigence",
+    sysReqHeaderDetails: "Détails",
+    sysReqDesktopTitle: "Ordinateur (bureau/portable)",
+    sysReqDesktopDesc: "Windows, macOS, ou Linux. (Pas conçu pour mobile/tablette.)",
+    sysReqBrowserTitle: "Navigateur",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera ou Safari (versions récentes recommandées).",
+    sysReqTMTitle: "Extension Tampermonkey",
+    sysReqTMDesc: "Nécessaire pour exécuter le userscript. Voir les étapes détaillées ci-dessous.",
+    sysReqNetTitle: "Internet stable",
+    sysReqNetDesc: "La connexion WebSocket est cruciale pour réclamer rapidement.",
+    sysReqStakeTitle: "Compte Stake.com",
+    sysReqStakeDesc: "Vous devez être connecté sur Stake.com pour que la réclamation réussisse.",
+    detailInstrTitle: "Instructions détaillées",
+    detailStep1: "1. Installer Tampermonkey",
+    detailStep1Desc: `Si vous avez déjà Tampermonkey et savez l’utiliser, vous pouvez passer au 
+      <a href="#detail-developer-mode">mode développeur</a> si nécessaire. Sinon :`,
+    figTampermonkey: "Figure : Installation de Tampermonkey",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `Allez sur 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chrome Web Store (Tampermonkey)</a>.`,
+    chromeStep2: "Cliquez « Ajouter à Chrome », puis confirmez « Ajouter l’extension ».",
+    chromeStep3: "Une icône (carré noir avec deux cercles blancs) apparaît en haut à droite après installation.",
+    edgeSubTitle: "Edge",
+    edgeStep1: `Ouvrez 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Tampermonkey dans Edge Add-ons</a>.`,
+    edgeStep2: "Cliquez « Obtenir » ou « Ajouter », autorisez l’installation.",
+    edgeStep3: "Vérifiez que Tampermonkey est actif (icône puzzle en haut).",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `Accédez à 
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">la page d’Add-on Tampermonkey</a>.`,
+    firefoxStep2: "Cliquez « Add to Firefox », puis « Add » dans l’invite.",
+    firefoxStep3: "Une fois installé, l’icône Tampermonkey apparaît. Sinon, vérifiez les modules complémentaires.",
+    detailStep2: "2. Activer le mode développeur",
+    detailStep2Desc: `Sur certains navigateurs Chromium (Chrome, Edge, Opera), il faut activer le mode développeur 
+      pour installer des scripts externes :`,
+    detailStep2UL1: `Chrome/Brave/Opera : ouvrez <code>chrome://extensions</code>, activez 
+      <strong>Developer mode</strong> (en haut à droite).`,
+    detailStep2UL2: `Edge : <code>edge://extensions</code>, activez <strong>Developer mode</strong> (en bas à gauche), 
+      et autorisez éventuellement les extensions d’autres stores.`,
+    detailStep2UL3: "Firefox n’a pas besoin de mode développeur pour Tampermonkey / userscripts.",
+    figDevMode: "Figure : Activation du mode développeur sur Chrome",
+    detailStep3: "3. Installer le script Ace Code Claimer",
+    detailStep3Li1: `Cliquez sur :
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>. 
+      Tampermonkey devrait ouvrir « Installer un script ».`,
+    detailStep3Li2: "Vérifiez les infos du script (nom, version, domaines) et cliquez « Installer ».",
+    detailStep3Li3: "Après l’installation, vérifiez que « Ace Code Claimer » apparaît dans Tampermonkey.",
+    figTMInstall: "Figure : Fenêtre d’installation Tampermonkey",
+    detailStep4: "4. Redémarrer votre navigateur",
+    detailStep4Desc: "Fermez toutes les fenêtres du navigateur et rouvrez pour charger complètement.",
+    detailStep5: "5. Ouvrir Stake.com",
+    detailStep5Li1: `Allez sur <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>. 
+      Connectez-vous.`,
+    detailStep5Li2: "Le script ajoute une petite barre ou panneau (en haut). Vous verrez un bouton « Connect ».",
+    detailStep5Li3: "Cliquez sur « Connect » pour se lier au serveur. Si le statut est « Connected », tout est prêt.",
+    howItWorksTitle: "Comment ça marche",
+    howItWorksDesc: `Une fois connecté, le script réclame automatiquement les codes via WebSocket. 
+      S’il y a un code valide, il le saisit aussitôt...`,
+    figInterface: "Figure : Interface Ace Code Claimer sur Stake.com",
+    tipTitle: "Astuce :",
+    tipDesc: `De nombreux codes ont un usage limité (ex : 1000 premiers). Même avec auto-réclamation, 
+      ils peuvent s’épuiser très vite. Une connexion stable est utile.`,
+    troubleTitle: "Dépannage & Conseils avancés",
+    prob1Title: "Problème :",
+    prob1Desc: "Le script n’apparaît pas ou ne se connecte pas.",
+    fix1Title: "Solution :",
+    fix1Desc: "Assurez-vous que Tampermonkey est actif. Vérifiez pare-feu/VPN. Essayez un autre navigateur.",
+    prob2Title: "Problème :",
+    prob2Desc: "Captchas Cloudflare Turnstile fréquents.",
+    fix2Title: "Solution :",
+    fix2Desc: "Résolvez le captcha pour continuer. Si ça persiste, votre IP/région est peut-être flaggée.",
+    prob3Title: "Problème :",
+    prob3Desc: "Message « Subscription expired » ou « Banned ».",
+    fix3Title: "Solution :",
+    fix3Desc: "Votre compte est peut-être restreint. Contactez le créateur du script ou le support Stake.",
+    recommendedSettingsTitle: "Paramètres navigateur recommandés",
+    recommendedSettingsLi1: "Excluez Stake.com du Chrome Memory Saver/Edge Sleeping Tabs.",
+    recommendedSettingsLi2: "Utilisez Cloudflare DNS (1.1.1.1) pour une résolution plus rapide.",
+    recommendedSettingsLi3: "Gardez idéalement un seul onglet Stake.com avec le script.",
+    finalNote: "Profitez de la réclamation automatique ! Pour plus d’aide, consultez le Telegram ou support officiel.",
+    detailStep2UL4: "Toujours sur la page des extensions, repérez <strong>Tampermonkey</strong>, cliquez sur <em>Details</em> puis activez&nbsp;<strong>Allow User Scripts</strong>.",
+    figAllowUserScripts: "Figure : Activation de « Allow User Scripts » dans Tampermonkey"
+  },
+
+  /* ===========================
+     5) SPANISH (ES)
+     =========================== */
+  es: {
+    pageTitle: "Ace Code Claimer – Guía de Configuración Rápida y Detallada",
+    selectLanguageLabel: "Seleccionar idioma:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `Un userscript práctico que reclama automáticamente los códigos de bonificación en Stake.com. 
+      Esta guía ofrece una <em>Configuración Rápida</em> (para usuarios familiarizados con Tampermonkey) 
+      y una <em>Configuración Detallada</em> más abajo. Incluso si eres nuevo, solo tomará unos minutos siguiendo los pasos.`,
+    quickSetupTitle: "Configuración Rápida (Instrucciones rápidas)",
+    qsStep1: `Instala <strong>Tampermonkey</strong> en tu navegador.
+      (<a href="#detail-tampermonkey">Guía detallada</a>)`,
+    qsStep2: `Activa el <strong>Modo Desarrollador</strong> (si Chrome/Edge lo requiere).
+      (<a href="#detail-developer-mode">Pasos detallados</a>)`,
+    qsStep3: `Haz clic en el enlace del script: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>.
+      Tampermonkey abrirá un diálogo de instalación; presiona <em>Instalar</em>.`,
+    qsStep4: `<strong>Reinicia tu navegador.</strong> Luego visita 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>.`,
+    qsStep5: `<strong>Conecta y Reclama Automáticamente:</strong> Al cargar la página, busca el botón “Connect” 
+      inyectado por el script. Haz clic si no se conecta solo. ¡Disfruta la reclamación automática de códigos!`,
+    qsNote: `<em>Si algún paso no está claro, o prefieres una explicación más detallada, 
+      revisa las <strong>instrucciones detalladas</strong> más abajo.</em>`,
+    introTitle: "Introducción",
+    introDetail: `<strong>Ace Code Claimer</strong> es un programa pequeño (un “userscript”) 
+      que se ejecuta en tu navegador vía Tampermonkey. Cuando visitas Stake.com, 
+      detecta los códigos de bonificación y los reclama automáticamente...`,
+    sysReqTitle: "Requisitos del Sistema",
+    sysReqHeaderReq: "Requisito",
+    sysReqHeaderDetails: "Detalles",
+    sysReqDesktopTitle: "Computadora de escritorio/portátil",
+    sysReqDesktopDesc: "Windows, macOS o Linux (no diseñado para móvil/tableta).",
+    sysReqBrowserTitle: "Navegador",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, Safari (versiones más recientes recomendadas).",
+    sysReqTMTitle: "Extensión Tampermonkey",
+    sysReqTMDesc: "Necesaria para ejecutar el userscript. Ver pasos detallados abajo.",
+    sysReqNetTitle: "Internet estable",
+    sysReqNetDesc: "La conexión WebSocket es esencial para reclamar rápidamente.",
+    sysReqStakeTitle: "Cuenta de Stake.com",
+    sysReqStakeDesc: "Debes iniciar sesión en Stake.com para que la reclamación funcione.",
+    detailInstrTitle: "Instrucciones Detalladas",
+    detailStep1: "1. Instalar Tampermonkey",
+    detailStep1Desc: `Si ya tienes Tampermonkey y sabes cómo usarlo, 
+      puedes saltar al <a href="#detail-developer-mode">Modo Desarrollador</a> si es necesario. Si no:`,
+    figTampermonkey: "Figura: Instalación de Tampermonkey",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `Abre 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chrome Web Store para Tampermonkey</a>.`,
+    chromeStep2: "Haz clic en «Agregar a Chrome», luego «Agregar extensión» para confirmar.",
+    chromeStep3: "Tras instalar, aparece un ícono negro (dos círculos blancos) en la esquina superior derecha.",
+    edgeSubTitle: "Edge",
+    edgeStep1: `Visita 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Tampermonkey en Edge Add-ons</a>.`,
+    edgeStep2: "Presiona «Obtener» o «Agregar», y permite la instalación.",
+    edgeStep3: "Asegúrate de que Tampermonkey esté activo (icono puzzle arriba).",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `Abre 
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">la página del complemento Tampermonkey</a>.`,
+    firefoxStep2: "Haz clic «Add to Firefox», luego «Add» en el cuadro de diálogo.",
+    firefoxStep3: "Tras instalar, aparece el ícono Tampermonkey. Si no, revisa complementos.",
+    detailStep2: "2. Habilitar Modo Desarrollador",
+    detailStep2Desc: `En algunos navegadores basados en Chromium (Chrome, Edge, Opera) se requiere el Modo Desarrollador 
+      para instalar userscripts externos:`,
+    detailStep2UL1: `Chrome/Brave/Opera: abre <code>chrome://extensions</code> y activa 
+      <strong>Developer mode</strong> (esquina superior derecha).`,
+    detailStep2UL2: `Edge: <code>edge://extensions</code>, habilita <strong>Developer mode</strong> (abajo a la izquierda)
+      y permite extensiones de otras tiendas si se pide.`,
+    detailStep2UL3: "Firefox no necesita Modo Desarrollador para Tampermonkey/userscripts.",
+    figDevMode: "Figura: Activar Modo Desarrollador en Chrome",
+    detailStep3: "3. Instalar el Script Ace Code Claimer",
+    detailStep3Li1: `Haz clic en: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>. 
+      Tampermonkey abrirá «Instalar script».`,
+    detailStep3Li2: "Revisa la información (nombre, versión, dominios) y pulsa «Install».",
+    detailStep3Li3: "Tras instalar, comprueba que «Ace Code Claimer» aparece en Tampermonkey.",
+    figTMInstall: "Figura: Diálogo de instalación de Tampermonkey",
+    detailStep4: "4. Reinicia tu Navegador",
+    detailStep4Desc: "Cierra todas las ventanas y reabre el navegador para cargar todo completamente.",
+    detailStep5: "5. Abre Stake.com",
+    detailStep5Li1: `Visita <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>. 
+      Inicia sesión en tu cuenta.`,
+    detailStep5Li2: "El script añade un panel arriba. Verás un botón «Connect» y configuraciones.",
+    detailStep5Li3: "Haz clic en «Connect» para enlazar con el servidor. Con estado «Connected», listo para autoclaim.",
+    howItWorksTitle: "Cómo Funciona",
+    howItWorksDesc: `Al conectarse, el script reclama automáticamente los códigos que llegan vía WebSocket. 
+      Si hay un código válido, se procesa instantáneamente...`,
+    figInterface: "Figura: Interfaz de Ace Code Claimer en Stake.com",
+    tipTitle: "Consejo:",
+    tipDesc: `Muchos códigos tienen uso limitado (p.ej., primeros 1000). Aunque sea automático, se agotan en un instante. 
+      Conexión estable y baja latencia ayudan.`,
+    troubleTitle: "Solución de Problemas & Consejos Avanzados",
+    prob1Title: "Problema:",
+    prob1Desc: "El script no aparece o no conecta.",
+    fix1Title: "Solución:",
+    fix1Desc: "Asegúrate de que Tampermonkey esté activo. Checa firewall/VPN. Prueba otro navegador.",
+    prob2Title: "Problema:",
+    prob2Desc: "CAPTCHAs frecuentes de Cloudflare Turnstile.",
+    fix2Title: "Solución:",
+    fix2Desc: "Completa el captcha. Si persiste, tu IP/región puede estar marcada.",
+    prob3Title: "Problema:",
+    prob3Desc: "Mensaje «Subscription expired» o «Banned».",
+    fix3Title: "Solución:",
+    fix3Desc: "Quizá tu cuenta esté restringida. Contacta al autor del script o al soporte de Stake.",
+    recommendedSettingsTitle: "Configuración Recomendada",
+    recommendedSettingsLi1: "Excluye Stake.com de Chrome Memory Saver/Edge Sleeping Tabs.",
+    recommendedSettingsLi2: "Considera usar Cloudflare DNS (1.1.1.1) para resolución más rápida.",
+    recommendedSettingsLi3: "Mantén solo una pestaña de Stake.com con el script para evitar conflictos.",
+    finalNote: "¡Disfruta la reclamación automática! Para más ayuda, revisa el Telegram oficial o canal de soporte.",
+    detailStep2UL4: "En la misma página de extensiones, busca <strong>Tampermonkey</strong>, haz clic en <em>Details</em> y activa&nbsp;<strong>Allow User Scripts</strong>.",
+    figAllowUserScripts: "Figura: Activar «Allow User Scripts» en Tampermonkey"
+  },
+
+  /* ===========================
+     6) TURKISH (TR)
+     =========================== */
+  tr: {
+    pageTitle: "Ace Code Claimer – Hızlı ve Detaylı Kurulum Rehberi",
+    selectLanguageLabel: "Dil Seçiniz:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `Stake.com üzerindeki bonus kodlarını otomatik olarak yakalayan kullanışlı bir userscript. 
+      Bu rehberde <em>Hızlı Kurulum</em> (Tampermonkey'e aşina olanlar için) ve altta <em>Detaylı Kurulum</em> anlatılmaktadır. 
+      Yeni olsanız bile, adımları dikkatle izlediğinizde sadece birkaç dakika alır.`,
+    quickSetupTitle: "Hızlı Kurulum (Kısa Talimatlar)",
+    qsStep1: `<strong>Tampermonkey</strong> eklentisini tarayıcınıza yükleyin. 
+      (<a href="#detail-tampermonkey">Detaylı rehber</a>)`,
+    qsStep2: `<strong>Geliştirici Modu</strong>nu etkinleştirin (Chrome/Edge gerekiyorsa).
+      (<a href="#detail-developer-mode">Detaylı adımlar</a>)`,
+    qsStep3: `Şu script bağlantısına tıklayın: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>.
+      Tampermonkey bir kurulum penceresi açacak; <em>Install</em>’a basın.`,
+    qsStep4: `<strong>Tarayıcınızı yeniden başlatın.</strong> Sonra 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>’a gidin.`,
+    qsStep5: `<strong>Bağlan & Otomatik Talep:</strong> Sayfa yüklenince, scriptin eklediği “Connect” düğmesini bulun 
+      (otomatik bağlanmadıysa tıklayın). Otomatik kod talebinin keyfini çıkarın!`,
+    qsNote: `<em>Bu adımlardan herhangi biri net değilse veya daha fazla açıklama isterseniz, 
+      <strong>detaylı talimatlara</strong> göz atın.</em>`,
+    introTitle: "Giriş",
+    introDetail: `<strong>Ace Code Claimer</strong>, tarayıcınızda Tampermonkey aracılığıyla çalışan küçük bir program (userscript). 
+      Stake.com’a girdiğinizde bonus kodları takip edip otomatik olarak, çoğu insandan daha hızlı talep eder...`,
+    sysReqTitle: "Sistem Gereksinimleri",
+    sysReqHeaderReq: "Gereksinim",
+    sysReqHeaderDetails: "Detay",
+    sysReqDesktopTitle: "Masaüstü/Dizüstü Bilgisayar",
+    sysReqDesktopDesc: "Windows, macOS veya Linux desteklenir. (Mobil/Tablet için tasarlanmadı).",
+    sysReqBrowserTitle: "Tarayıcı",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, Safari (güncel sürümleri önerilir).",
+    sysReqTMTitle: "Tampermonkey Eklentisi",
+    sysReqTMDesc: "Userscript’i çalıştırmak için gerekli. Aşağıdaki kurulum adımlarını izleyin.",
+    sysReqNetTitle: "Kararlı İnternet",
+    sysReqNetDesc: "WebSocket bağlantısı hızlı talep için kritik önemdedir.",
+    sysReqStakeTitle: "Stake.com Hesabı",
+    sysReqStakeDesc: "Kodların geçerli olması için Stake.com’da giriş yapmış olmalısınız.",
+    detailInstrTitle: "Detaylı Talimatlar",
+    detailStep1: "1. Tampermonkey Kurulumu",
+    detailStep1Desc: `Zaten Tampermonkey kuruluysa ve nasıl çalıştığını biliyorsanız, gerekliyse 
+      <a href="#detail-developer-mode">Geliştirici Modu</a> adımına geçebilirsiniz. Aksi halde:`,
+    figTampermonkey: "Şekil: Tampermonkey Kurulumu",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `Şu sayfaya gidin: 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chrome Web Store (Tampermonkey)</a>.`,
+    chromeStep2: "‘Chrome’a Ekle’ butonuna tıklayın, ardından ‘Eklentiyi Ekle’ diyerek onaylayın.",
+    chromeStep3: "Kurulum tamamlanınca sağ üstte siyah kare içinde iki beyaz daireli ikon göreceksiniz.",
+    edgeSubTitle: "Edge",
+    edgeStep1: `Şu linkten 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Edge Eklentiler (Tampermonkey)</a> sayfasına gidin.`,
+    edgeStep2: "‘Get’ veya ‘Add’ e basın, kurulumu onaylayın.",
+    edgeStep3: "Ardından Tampermonkey’in aktif olduğundan emin olun (yukarıdaki puzzle ikonu).",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `Şuraya gidin:
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">Tampermonkey Add-on sayfası</a>.`,
+    firefoxStep2: "‘Add to Firefox’ deyip açılan pencerede ‘Add’ ile onaylayın.",
+    firefoxStep3: "Kurulduktan sonra Tampermonkey ikonu belirecek. Yoksa Add-ons menüsünü kontrol edin.",
+    detailStep2: "2. Geliştirici Modunu Etkinleştirin",
+    detailStep2Desc: `Chrome, Edge, Opera gibi bazı Chromium tabanlı tarayıcılarda harici URL’den userscript yüklemek için 
+      geliştirici modu gerekebilir:`,
+    detailStep2UL1: `Chrome/Brave/Opera: <code>chrome://extensions</code> yazıp 
+      <strong>Developer mode</strong> (sağ üstte) etkinleştirin.`,
+    detailStep2UL2: `Edge: <code>edge://extensions</code>’e gidin, solda <strong>Developer mode</strong>’u açın, 
+      diğer store eklentilerine izin verin.`,
+    detailStep2UL3: "Firefox’ta Tampermonkey/userscripts için geliştirici modu gerekmez.",
+    figDevMode: "Şekil: Chrome’da Geliştirici Modu Etkinleştirme",
+    detailStep3: "3. Ace Code Claimer Script’ini Kurun",
+    detailStep3Li1: `Şu linke tıklayın: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      Tampermonkey ‘Install script’ penceresi açacaktır.`,
+    detailStep3Li2: "Script bilgilerini inceleyip ‘Install’ butonuna basın.",
+    detailStep3Li3: "Kurulum sonrası Tampermonkey arayüzünde ‘Ace Code Claimer’ göründüğünü doğrulayın.",
+    figTMInstall: "Şekil: Tampermonkey Kurulum Penceresi",
+    detailStep4: "4. Tarayıcıyı Yeniden Başlatın",
+    detailStep4Desc: "En iyi sonuç için tüm pencereleri kapatıp yeniden açın, böylece eklenti tam yüklensin.",
+    detailStep5: "5. Stake.com’u Açın",
+    detailStep5Li1: `Şu adrese gidin: <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>. 
+      Hesabınıza giriş yapın.`,
+    detailStep5Li2: "Script sayfanın üst bölümünde küçük bir panel ekler, ‘Connect’ düğmesi gözükür.",
+    detailStep5Li3: "Kod talep sunucusuna bağlanmak için ‘Connect’e basın. ‘Connected’ olunca hazırsınız.",
+    howItWorksTitle: "Nasıl Çalışır",
+    howItWorksDesc: `Bağlanınca script, WebSocket üzerinden gelen bonus kodlarını otomatik talep eder. 
+      Geçerli kod görülünce anında sizin adınıza talep gönderir...`,
+    figInterface: "Şekil: Ace Code Claimer arayüzü",
+    tipTitle: "İpucu:",
+    tipDesc: `Pek çok bonus kodun sınırlı kullanım hakkı (ör. ilk 1000) vardır. Otomatik olsa bile anında bitebilir. 
+      Stabil internet ve düşük gecikme önemlidir.`,
+    troubleTitle: "Sorun Giderme & İleri Düzey İpuçları",
+    prob1Title: "Sorun:",
+    prob1Desc: "Script görünmüyor veya bağlanmıyor.",
+    fix1Title: "Çözüm:",
+    fix1Desc: "Tampermonkey’in açık olduğundan emin olun. VPN/firewall ayarlarını kontrol edin. Farklı tarayıcı deneyin.",
+    prob2Title: "Sorun:",
+    prob2Desc: "Sürekli Cloudflare Turnstile CAPTCHA çıkıyor.",
+    fix2Title: "Çözüm:",
+    fix2Desc: "Devam etmek için CAPTCHA’yı doğrulayın. Sık tekrarlanıyorsa IP bölgeniz işaretlenmiş olabilir.",
+    prob3Title: "Sorun:",
+    prob3Desc: "“Subscription expired” veya “Banned” mesajı.",
+    fix3Title: "Çözüm:",
+    fix3Desc: "Sunucu veya Stake tarafından kısıtlama olabilir. Script yazarı veya Stake desteğiyle iletişime geçin.",
+    recommendedSettingsTitle: "Önerilen Tarayıcı Ayarları",
+    recommendedSettingsLi1: "Stake.com’u Chrome Memory Saver/Edge Sleeping Tabs dışında bırakın.",
+    recommendedSettingsLi2: "DNS sorgularını hızlandırmak için Cloudflare DNS (1.1.1.1) kullanabilirsiniz.",
+    recommendedSettingsLi3: "Aynı anda tek bir Stake.com sekmesi açmanız tavsiye edilir.",
+    finalNote: "Otomatik kod talebinin tadını çıkarın! Yardım gerekirse geliştiricinin Telegram’ına veya desteğe başvurun.",
+    detailStep2UL4: "Aynı eklentiler sayfasında <strong>Tampermonkey</strong>'i bulun, <em>Details</em>'e tıklayın ve&nbsp;<strong>Allow User Scripts</strong>&nbsp;seçeneğini etkinleştirin.",
+    figAllowUserScripts: "Şekil: Tampermonkey'de “Allow User Scripts” seçeneğini etkinleştirme"
+  },
+
+  /* ===========================
+     7) JAPANESE (JA)
+     =========================== */
+  ja: {
+    pageTitle: "Ace Code Claimer – クイック＆詳細セットアップガイド",
+    selectLanguageLabel: "言語を選択:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `Stake.comのボーナスコードを自動で請求する便利なユーザースクリプトです。
+      このガイドでは <em>クイックセットアップ</em>（Tampermonkeyに慣れている方向け）と
+      <em>詳細セットアップ</em>を紹介します。初心者でも、手順に従うだけで数分で完了できます。`,
+    quickSetupTitle: "クイックセットアップ（簡易手順）",
+    qsStep1: `<strong>Tampermonkey</strong>をブラウザにインストールしてください。
+      (<a href="#detail-tampermonkey">詳細ガイド</a>)`,
+    qsStep2: `<strong>デベロッパーモード</strong>を有効にする（Chrome/Edgeで必要な場合）。
+      (<a href="#detail-developer-mode">詳細手順</a>)`,
+    qsStep3: `スクリプトのリンクをクリック：
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>。
+      Tampermonkeyがインストールダイアログを開くので<em>Install</em>をクリック。`,
+    qsStep4: `<strong>ブラウザを再起動</strong>してください。その後、
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>にアクセス。`,
+    qsStep5: `<strong>接続 & 自動請求:</strong> ページが読み込まれると、スクリプトが挿入した「Connect」ボタンを探します。
+      自動接続されない場合はクリック。自動請求をお楽しみください！`,
+    qsNote: `<em>もし不明な点があれば、あるいは詳しい説明が必要なら
+      下記の<strong>詳細手順</strong>を確認してください。</em>`,
+    introTitle: "はじめに",
+    introDetail: `<strong>Ace Code Claimer</strong>は、ブラウザでTampermonkeyを介して動作する小さなプログラム（userscript）です。
+      Stake.comを訪れると、ボーナスコードを監視し、自動的に請求…`,
+    sysReqTitle: "システム要件",
+    sysReqHeaderReq: "要件",
+    sysReqHeaderDetails: "詳細",
+    sysReqDesktopTitle: "デスクトップ/ノートPC",
+    sysReqDesktopDesc: "Windows, macOS, Linuxに対応。（モバイル/タブレット非対応）",
+    sysReqBrowserTitle: "ブラウザ",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, Safari（最新バージョン推奨）",
+    sysReqTMTitle: "Tampermonkey拡張機能",
+    sysReqTMDesc: "Userscriptを動作させるために必須。詳細インストール手順は下記。",
+    sysReqNetTitle: "安定したネット接続",
+    sysReqNetDesc: "高速請求にはWebSocket接続が重要です。",
+    sysReqStakeTitle: "Stake.comアカウント",
+    sysReqStakeDesc: "請求を成功させるには、Stake.comにログインしている必要があります。",
+    detailInstrTitle: "詳細セットアップ",
+    detailStep1: "1. Tampermonkeyをインストール",
+    detailStep1Desc: `すでにTampermonkeyをインストール済みで使い方をご存知なら、
+      <a href="#detail-developer-mode">デベロッパーモード</a>へ進んでください。そうでなければ：`,
+    figTampermonkey: "図：Tampermonkeyのインストール",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `以下にアクセス：
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chromeウェブストア (Tampermonkey)</a>。`,
+    chromeStep2: "「Chromeに追加」をクリックし、「拡張機能を追加」で確認。",
+    chromeStep3: "インストール後、右上にアイコン（黒背景に白い丸2つ）が表示されます。",
+    edgeSubTitle: "Edge",
+    edgeStep1: `以下にアクセス：
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Edge Add-ons (Tampermonkey)</a>。`,
+    edgeStep2: "「Get」または「Add」をクリックし、インストールを許可。",
+    edgeStep3: "インストール後、Tampermonkeyが有効か（パズルアイコンなど）確認します。",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `以下のページへ：
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">Tampermonkeyアドオン</a>。`,
+    firefoxStep2: "「Add to Firefox」を押し、続いて「Add」。",
+    firefoxStep3: "インストール完了後、Tampermonkeyアイコンが表示されない場合はアドオンメニューを確認。",
+    detailStep2: "2. デベロッパーモードを有効化",
+    detailStep2Desc: `Chrome, Edge, OperaなどChromium系ブラウザでは外部URLからuserscriptをインストールする場合
+      デベロッパーモードが必要なことがあります：`,
+    detailStep2UL1: `Chrome/Brave/Opera: <code>chrome://extensions</code>へアクセスし、
+      右上の<strong>Developer mode</strong>をオンに。`,
+    detailStep2UL2: `Edge: <code>edge://extensions</code>へ行き、
+      <strong>Developer mode</strong>（左下）を有効にし、他ストア拡張を許可。`,
+    detailStep2UL3: "Firefoxにはデベロッパーモードは不要です。",
+    figDevMode: "図：Chromeでデベロッパーモードを有効にする",
+    detailStep3: "3. Ace Code Claimerスクリプトをインストール",
+    detailStep3Li1: `以下のリンクをクリック：
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>。
+      Tampermonkeyが「スクリプトのインストール」ダイアログを表示。`,
+    detailStep3Li2: "スクリプト情報（名前、バージョン、ドメインなど）を確認し、「Install」。",
+    detailStep3Li3: "インストール後、Tampermonkeyダッシュボードに「Ace Code Claimer」があることを確認。",
+    figTMInstall: "図：Tampermonkeyインストールダイアログ",
+    detailStep4: "4. ブラウザを再起動",
+    detailStep4Desc: "すべてのウィンドウを閉じてから再度開き、Tampermonkeyとスクリプトを完全読み込みさせます。",
+    detailStep5: "5. Stake.comを開く",
+    detailStep5Li1: `こちらへ：
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>に行き、ログインしてください。`,
+    detailStep5Li2: "スクリプトはページ上部に小さなパネルを追加し、「Connect」ボタンが見えます。",
+    detailStep5Li3: "「Connect」を押してコード請求サーバーに接続。ステータス「Connected」なら自動請求OK。",
+    howItWorksTitle: "仕組み",
+    howItWorksDesc: `接続後、WebSocket経由で届くコードを自動的に請求。 
+      有効なコードが通知されると即時にリクエスト送信...`,
+    figInterface: "図：Ace Code Claimerのインターフェイス",
+    tipTitle: "ヒント：",
+    tipDesc: `ボーナスコードは限定数（例：先着1000名）などが多いです。自動でも一瞬で尽きる可能性。 
+      安定回線と低遅延が望ましい。`,
+    troubleTitle: "トラブルシューティング & 上級者向けTips",
+    prob1Title: "問題：",
+    prob1Desc: "スクリプトが表示されない/接続しない。",
+    fix1Title: "対処：",
+    fix1Desc: "Tampermonkeyが有効か確認。ファイアウォール/VPNをチェック。別のブラウザやスリープタブ設定も確認。",
+    prob2Title: "問題：",
+    prob2Desc: "Cloudflare Turnstile CAPTCHAが頻繁に出る。",
+    fix2Title: "対処：",
+    fix2Desc: "CAPTCHAを解決して進む。繰り返すならIPや地域がフラグされているかも。",
+    prob3Title: "問題：",
+    prob3Desc: "「Subscription expired」または「Banned」メッセージ。",
+    fix3Title: "対処：",
+    fix3Desc: "スクリプトサーバーかStake側でアカウント制限の可能性。作者またはサポートへ連絡。",
+    recommendedSettingsTitle: "推奨ブラウザ設定",
+    recommendedSettingsLi1: "ChromeのMemory SaverやEdgeのSleeping TabsからStake.comを除外してください。",
+    recommendedSettingsLi2: "名前解決を高速化するにはCloudflare DNS (1.1.1.1)などを検討。",
+    recommendedSettingsLi3: "Scriptを動かすStake.comタブは1つのみにしたほうが衝突回避。",
+    finalNote: "自動ボーナス請求を楽しんでください！ 追加サポートは開発者のTelegramやサポートチャネルへ。",
+    detailStep2UL4: "拡張機能ページで<strong>Tampermonkey</strong>を見つけ、<em>Details</em>をクリックして<strong>Allow User Scripts</strong>をオンにします。",
+    figAllowUserScripts: "図：Tampermonkey で「Allow User Scripts」を有効にする"
+  },
+
+  /* ===========================
+     8) KOREAN (KO)
+     =========================== */
+  ko: {
+    pageTitle: "Ace Code Claimer – 빠르고 상세한 설정 가이드",
+    selectLanguageLabel: "언어 선택:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `Stake.com에서 보너스 코드를 자동으로 받아주는 편리한 Userscript입니다.
+      이 가이드에는 Tampermonkey에 익숙한 사용자를 위한 <em>빠른 설정</em>과 
+      아래의 <em>상세 설정</em>이 있습니다. 초보자라도 단계를 잘 따라 하면 몇 분이면 충분합니다.`,
+    quickSetupTitle: "빠른 설정 (간단 안내)",
+    qsStep1: `<strong>Tampermonkey</strong>를 브라우저에 설치하세요.
+      (<a href="#detail-tampermonkey">상세 가이드</a>)`,
+    qsStep2: `<strong>개발자 모드</strong>를 활성화하세요 (Chrome/Edge 필요 시).
+      (<a href="#detail-developer-mode">자세한 단계</a>)`,
+    qsStep3: `스크립트 링크를 클릭하세요: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>.
+      Tampermonkey가 설치 대화창을 열면 <em>Install</em>를 누르세요.`,
+    qsStep4: `<strong>브라우저를 재시작</strong>한 뒤 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>으로 이동하세요.`,
+    qsStep5: `<strong>연결 & 자동 클레임:</strong> 페이지 로딩 후, 스크립트가 삽입한 “Connect” 버튼을 찾으세요 
+      (자동 연결이 안 됐다면 클릭). 자동 코드 클레임을 즐기세요!`,
+    qsNote: `<em>이해가 안 되는 부분이 있거나 더 자세한 안내가 필요하다면,
+      아래 <strong>상세 안내</strong>를 확인하세요.</em>`,
+    introTitle: "소개",
+    introDetail: `<strong>Ace Code Claimer</strong>는 브라우저에서 Tampermonkey를 통해 작동하는 작은 프로그램(userscript)입니다.
+      Stake.com 방문 시 보너스 코드를 모니터링하고 자동으로, 매우 빠르게 클레임...`,
+    sysReqTitle: "시스템 요구 사항",
+    sysReqHeaderReq: "요구 사항",
+    sysReqHeaderDetails: "세부 내용",
+    sysReqDesktopTitle: "데스크톱/노트북 PC",
+    sysReqDesktopDesc: "Windows, macOS, Linux 지원 (모바일/태블릿용 아님).",
+    sysReqBrowserTitle: "브라우저",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, Safari (최신 버전 권장).",
+    sysReqTMTitle: "Tampermonkey 확장",
+    sysReqTMDesc: "Userscript 실행에 필수. 아래 상세 설치단계 참고.",
+    sysReqNetTitle: "안정적인 인터넷",
+    sysReqNetDesc: "빠른 클레임을 위해 WebSocket 연결이 매우 중요합니다.",
+    sysReqStakeTitle: "Stake.com 계정",
+    sysReqStakeDesc: "코드가 유효하게 처리되려면 Stake.com에 로그인해야 함.",
+    detailInstrTitle: "상세 안내",
+    detailStep1: "1. Tampermonkey 설치",
+    detailStep1Desc: `Tampermonkey가 이미 설치되어 있고 사용법을 안다면,
+      <a href="#detail-developer-mode">개발자 모드</a> 단계로 넘어가도 됩니다. 아니면 아래를 따라세요:`,
+    figTampermonkey: "그림: Tampermonkey 설치",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `이 링크로 이동하세요: 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chrome 웹 스토어 (Tampermonkey)</a>.`,
+    chromeStep2: "‘Chrome에 추가’를 클릭 후 ‘확장 프로그램 추가’로 확인하십시오.",
+    chromeStep3: "설치 완료 후 오른쪽 상단에 (검정 사각에 흰 원 2개) 아이콘이 나타납니다.",
+    edgeSubTitle: "Edge",
+    edgeStep1: `아래 링크로 가세요:
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Edge 애드온 (Tampermonkey)</a>.`,
+    edgeStep2: "‘Get’ 또는 ‘Add’를 클릭, 설치를 허용합니다.",
+    edgeStep3: "설치 후 Tampermonkey가 활성인지(오른쪽 상단 퍼즐 아이콘 등) 확인하세요.",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `이 페이지로 이동:
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">Tampermonkey Add-on</a>.`,
+    firefoxStep2: "‘Add to Firefox’, 그 다음 ‘Add’ 확인 창 클릭.",
+    firefoxStep3: "설치 후 Tampermonkey 아이콘이 나타납니다. 없다면 Add-ons 메뉴 확인.",
+    detailStep2: "2. 개발자 모드 활성화",
+    detailStep2Desc: `Chrome, Edge, Opera 같은 Chromium 브라우저는 외부 URL의 userscript 설치 시
+      개발자 모드가 필요할 수 있습니다:`,
+    detailStep2UL1: `Chrome/Brave/Opera: <code>chrome://extensions</code>에 가서 
+      오른쪽 상단 ‘Developer mode’를 켜세요.`,
+    detailStep2UL2: `Edge: <code>edge://extensions</code>, 왼쪽 아래 ‘개발자 모드’ 켜고 
+      스토어 외 확장 허용.`,
+    detailStep2UL3: "Firefox는 Tampermonkey/userscripts에 개발자 모드가 필요 없습니다.",
+    figDevMode: "그림: Chrome에서 개발자 모드 활성화",
+    detailStep3: "3. Ace Code Claimer 스크립트 설치",
+    detailStep3Li1: `아래 링크 클릭:
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      Tampermonkey가 ‘Install script’ 대화창을 열 것.`,
+    detailStep3Li2: "스크립트 정보(이름, 버전, 도메인 등) 확인 후 <em>Install</em> 클릭.",
+    detailStep3Li3: "설치 후 Tampermonkey 대시보드에 ‘Ace Code Claimer’가 목록에 있는지 확인.",
+    figTMInstall: "그림: Tampermonkey 설치 대화창",
+    detailStep4: "4. 브라우저 재시작",
+    detailStep4Desc: "모든 창을 닫고 다시 열어야 Tampermonkey와 새 스크립트가 완전히 로드됩니다.",
+    detailStep5: "5. Stake.com 열기",
+    detailStep5Li1: `다음으로 이동: 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>. 로그인하세요.`,
+    detailStep5Li2: "스크립트가 페이지 상단에 패널을 삽입, ‘Connect’ 버튼 등을 볼 수 있습니다.",
+    detailStep5Li3: "‘Connect’ 클릭해서 코드 서버와 연결. ‘Connected’가 되면 자동 클레임 준비 완료.",
+    howItWorksTitle: "동작 방식",
+    howItWorksDesc: `연결 후 스크립트는 WebSocket을 통해 들어오는 보너스 코드를 자동으로 요청합니다.
+      유효한 코드를 인식하면 즉시 클레임...`,
+    figInterface: "그림: Ace Code Claimer 인터페이스",
+    tipTitle: "팁:",
+    tipDesc: `많은 보너스 코드는 제한된 횟수(예: 선착순 1000)입니다. 자동이라도 빠르게 소진될 수 있으니
+      안정적인 인터넷과 낮은 지연이 중요합니다.`,
+    troubleTitle: "문제 해결 & 고급 팁",
+    prob1Title: "문제:",
+    prob1Desc: "스크립트가 안 보이거나 연결이 되지 않음.",
+    fix1Title: "해결:",
+    fix1Desc: "Tampermonkey가 켜져 있는지, VPN/방화벽, 다른 브라우저, 탭 절전 기능 등을 확인하세요.",
+    prob2Title: "문제:",
+    prob2Desc: "Cloudflare Turnstile CAPTCHA가 자주 뜸.",
+    fix2Title: "해결:",
+    fix2Desc: "CAPTCHA를 해결해야 진행 가능. 지속된다면 IP나 지역이 차단된 것일 수 있음.",
+    prob3Title: "문제:",
+    prob3Desc: "“Subscription expired” 또는 “Banned” 메시지.",
+    fix3Title: "해결:",
+    fix3Desc: "스크립트 서버나 Stake 측에서 계정 제한일 수도. 제공자나 지원팀과 상담.",
+    recommendedSettingsTitle: "권장 브라우저 설정",
+    recommendedSettingsLi1: "Stake.com을 Chrome 메모리 세이버/Edge 슬리핑 탭에서 제외하세요.",
+    recommendedSettingsLi2: "DNS 조회 속도를 위해 Cloudflare DNS(1.1.1.1)를 고려하세요.",
+    recommendedSettingsLi3: "동시에 여러 Stake.com 탭을 열지 않는 것이 좋습니다.",
+    finalNote: "자동 보너스 코드 클레임을 즐기세요! 더 도움이 필요하면 개발자 공식 Telegram이나 지원 문의하세요.",
+    detailStep2UL4: "확장 프로그램 페이지에서 <strong>Tampermonkey</strong>를 찾아 <em>Details</em>를 클릭한 뒤&nbsp;<strong>Allow User Scripts</strong>를 켭니다.",
+    figAllowUserScripts: "그림: Tampermonkey에서 ‘Allow User Scripts’ 활성화"
+  },
+
+  /* ===========================
+     9) CHINESE (ZH)
+     =========================== */
+  zh: {
+    pageTitle: "Ace Code Claimer – 快速与详细设置指南",
+    selectLanguageLabel: "选择语言：",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `这是一个可以在 Stake.com 上自动领取优惠码的 userscript。 
+      本指南提供 <em>快速安装</em>（适合熟悉 Tampermonkey 的用户）和 <em>详细安装</em>。 
+      即使你是新手，只要认真按照步骤做，几分钟即可完成。`,
+    quickSetupTitle: "快速安装（简要说明）",
+    qsStep1: `在浏览器中安装 <strong>Tampermonkey</strong>。
+      (<a href="#detail-tampermonkey">详细指南</a>)`,
+    qsStep2: `如果使用 Chrome/Edge，可能需要开启 <strong>开发者模式</strong>。
+      (<a href="#detail-developer-mode">详细步骤</a>)`,
+    qsStep3: `点击此脚本链接： 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>。
+      Tampermonkey 将打开安装对话框；点击 <em>Install</em>。`,
+    qsStep4: `<strong>重启浏览器</strong>，然后访问 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>。`,
+    qsStep5: `<strong>连接 & 自动领取：</strong> 加载页面后，寻找脚本插入的 “Connect” 按钮
+      （如果未自动连接，请手动点击）。享受自动领取优惠码吧！`,
+    qsNote: `<em>若以上步骤不清楚，或你想要更详细的说明，请查看下方的 
+      <strong>详细安装</strong>章节。</em>`,
+    introTitle: "简介",
+    introDetail: `<strong>Ace Code Claimer</strong> 是一个通过 Tampermonkey 在浏览器中运行的小程序（userscript）。
+      当你访问 Stake.com 时，它会监测并自动领取优惠码…`,
+    sysReqTitle: "系统需求",
+    sysReqHeaderReq: "需求",
+    sysReqHeaderDetails: "详情",
+    sysReqDesktopTitle: "桌面 / 笔记本电脑",
+    sysReqDesktopDesc: "支持 Windows、macOS 或 Linux。（不适用于手机/平板）",
+    sysReqBrowserTitle: "浏览器",
+    sysReqBrowserDesc: "Chrome、Edge、Firefox、Opera、Safari（建议最新版本）。",
+    sysReqTMTitle: "Tampermonkey 扩展",
+    sysReqTMDesc: "需要此扩展来运行本 userscript。请参见下方详细的安装步骤。",
+    sysReqNetTitle: "稳定的网络",
+    sysReqNetDesc: "需要 WebSocket 连接来快速领取。",
+    sysReqStakeTitle: "Stake.com 账户",
+    sysReqStakeDesc: "必须登录 Stake.com 才能成功领取。",
+    detailInstrTitle: "详细安装",
+    detailStep1: "1. 安装 Tampermonkey",
+    detailStep1Desc: `如果你已经安装了 Tampermonkey 并且懂得使用，可视情况跳到 
+      <a href="#detail-developer-mode">开发者模式</a>。否则按照以下说明操作：`,
+    figTampermonkey: "图：安装 Tampermonkey",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `访问
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chrome 网上应用店 (Tampermonkey)</a>。`,
+    chromeStep2: "点击“添加到 Chrome”，然后“添加扩展程序”确认。",
+    chromeStep3: "安装后，右上角会出现一个图标（黑色方块里有两个白色圆点）。",
+    edgeSubTitle: "Edge",
+    edgeStep1: `转到 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Edge 附加组件 (Tampermonkey)</a>。`,
+    edgeStep2: "点击“获取”或“添加”，并允许安装。",
+    edgeStep3: "安装后，确认 Tampermonkey 是否已启用（如在右上角 puzzle 图标中）。",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `打开 
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">Tampermonkey 插件页面</a>。`,
+    firefoxStep2: "点击“Add to Firefox”，然后在弹出窗口点“Add”。",
+    firefoxStep3: "安装完成后，会出现 Tampermonkey 图标。若未出现，请检查附加组件菜单。",
+    detailStep2: "2. 开启开发者模式",
+    detailStep2Desc: `在部分基于 Chromium 的浏览器（Chrome, Edge, Opera）中，从外部链接安装 userscript 
+      可能需要开发者模式：`,
+    detailStep2UL1: `Chrome/Brave/Opera：打开 <code>chrome://extensions</code>，右上角开启 
+      <strong>Developer mode</strong>。`,
+    detailStep2UL2: `Edge：<code>edge://extensions</code>，开启 <strong>Developer mode</strong>（左下角），
+      若提示允许其它商店扩展则同意。`,
+    detailStep2UL3: "Firefox 无需开发者模式即可安装 Tampermonkey 或 userscripts。",
+    figDevMode: "图：在 Chrome 中启用开发者模式",
+    detailStep3: "3. 安装 Ace Code Claimer 脚本",
+    detailStep3Li1: `点击链接：
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>。
+      Tampermonkey 会打开“安装脚本”对话框。`,
+    detailStep3Li2: "查看脚本信息（名称、版本、域名）后，点击“Install”。",
+    detailStep3Li3: "安装后，在 Tampermonkey 仪表板检查是否显示“Ace Code Claimer”。",
+    figTMInstall: "图：Tampermonkey 安装提示",
+    detailStep4: "4. 重启浏览器",
+    detailStep4Desc: "关闭所有浏览器窗口并重新打开，以便 Tampermonkey 和脚本完全加载。",
+    detailStep5: "5. 打开 Stake.com",
+    detailStep5Li1: `访问
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>
+      并登录。`,
+    detailStep5Li2: "脚本会在页面顶部插入一个小面板，你会看到“Connect”按钮和一些设置选项。",
+    detailStep5Li3: "点击“Connect”来连接领取服务器。当状态显示“Connected”时，即可自动领取。",
+    howItWorksTitle: "工作原理",
+    howItWorksDesc: `连接后，脚本会自动通过 WebSocket 识别并领取优惠码。
+      如果有可用码，会立即请求领取…`,
+    figInterface: "图：Ace Code Claimer 界面示例",
+    tipTitle: "提示：",
+    tipDesc: `许多优惠码有使用次数限制（如前1000个）。即使自动领取，也可能瞬间被领完。
+      稳定网络和低延迟可提高成功率。`,
+    troubleTitle: "故障排查 & 高级技巧",
+    prob1Title: "问题：",
+    prob1Desc: "脚本没有出现或无法连接。",
+    fix1Title: "解决：",
+    fix1Desc: "确保 Tampermonkey 已启用。检查防火墙/VPN。可尝试其他浏览器或关闭休眠标签。",
+    prob2Title: "问题：",
+    prob2Desc: "频繁出现 Cloudflare Turnstile 验证。",
+    fix2Title: "解决：",
+    fix2Desc: "完成验证码后继续。如果持续，可能 IP/地区被标记。切换服务器或正常使用可减缓。",
+    prob3Title: "问题：",
+    prob3Desc: "显示“Subscription expired”或“Banned”。",
+    fix3Title: "解决：",
+    fix3Desc: "可能脚本服务器或 Stake 限制了帐号。若疑误判，请联系脚本作者或 Stake 支持。",
+    recommendedSettingsTitle: "推荐的浏览器设置",
+    recommendedSettingsLi1: "在Chrome内存节省或Edge睡眠标签页中排除Stake.com。",
+    recommendedSettingsLi2: "可使用 Cloudflare DNS (1.1.1.1) 获取更快的域名解析。",
+    recommendedSettingsLi3: "避免冲突，最好只开一个运行脚本的 Stake.com 标签页。",
+    finalNote: "祝自动领取优惠码顺利！如需帮助，可查看开发者的官方 Telegram 或客服渠道。",
+    detailStep2UL4: "仍在扩展页面中，找到 <strong>Tampermonkey</strong>，点击 <em>Details</em>，然后打开&nbsp;<strong>Allow User Scripts</strong>。",
+    figAllowUserScripts: "图：在 Tampermonkey 中启用 “Allow User Scripts”"
+  },
+
+  /* ===========================
+     10) ARABIC (AR)
+     =========================== */
+  ar: {
+    pageTitle: "Ace Code Claimer – دليل الإعداد السريع والتفصيلي",
+    selectLanguageLabel: "اختر اللغة:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `سكريبت مستخدم (Userscript) مريح يُطالب أكواد المكافآت على Stake.com تلقائياً.
+      في هذا الدليل ستجد <em>إعداداً سريعاً</em> (لمن يعرفون Tampermonkey) و 
+      <em>إعداداً تفصيلياً</em> بالأسفل. حتى لو كنت جديداً، فلن يستغرق الأمر سوى بضع دقائق باتباع الخطوات.`,
+    quickSetupTitle: "إعداد سريع (تعليمات مختصرة)",
+    qsStep1: `ثبّت إضافة <strong>Tampermonkey</strong> في متصفحك.
+      (<a href="#detail-tampermonkey">دليل تفصيلي</a>)`,
+    qsStep2: `قم بتمكين <strong>وضع المطور</strong> (إذا تطلب الأمر في Chrome/Edge).
+      (<a href="#detail-developer-mode">خطوات تفصيلية</a>)`,
+    qsStep3: `انقر على رابط السكربت:
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>.
+      سيفتح Tampermonkey حوار التثبيت؛ اضغط <em>Install</em>.`,
+    qsStep4: `<strong>أعد تشغيل المتصفح.</strong> ثم توجه إلى 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>.`,
+    qsStep5: `<strong>اتصل وتمتع بالمطالبة التلقائية:</strong> عند تحميل الصفحة، ابحث عن زر "Connect" 
+      الذي يضيفه السكربت. انقر عليه إن لم يتصل تلقائياً. استمتع بالمطالبة التلقائية بالأكواد!`,
+    qsNote: `<em>إذا كان هناك أي خطوة غير واضحة، أو كنت تفضّل شرحاً أكثر، راجع 
+      <strong>الإرشادات التفصيلية</strong> أدناه.</em>`,
+    introTitle: "مقدمة",
+    introDetail: `<strong>Ace Code Claimer</strong> عبارة عن سكربت مستخدم صغير يعمل داخل المتصفح من خلال Tampermonkey.
+      عند زيارتك لـ Stake.com، يراقب أكواد المكافآت ويطالب بها تلقائياً...`,
+    sysReqTitle: "متطلبات النظام",
+    sysReqHeaderReq: "المتطلب",
+    sysReqHeaderDetails: "التفاصيل",
+    sysReqDesktopTitle: "جهاز كمبيوتر مكتبي/محمول",
+    sysReqDesktopDesc: "مدعوم لأنظمة Windows, macOS, أو Linux (ليس للهواتف/الأجهزة اللوحية).",
+    sysReqBrowserTitle: "المتصفح",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, أو Safari (الإصدارات الأحدث موصى بها).",
+    sysReqTMTitle: "إضافة Tampermonkey",
+    sysReqTMDesc: "مطلوبة لتشغيل السكربت. اطلع على خطوات التثبيت أدناه.",
+    sysReqNetTitle: "إنترنت مستقر",
+    sysReqNetDesc: "اتصال WebSocket ضروري للسرعة في المطالبة.",
+    sysReqStakeTitle: "حساب في Stake.com",
+    sysReqStakeDesc: "يجب تسجيل الدخول في Stake.com لكي تنجح المطالبة.",
+    detailInstrTitle: "تعليمات تفصيلية",
+    detailStep1: "1. تثبيت Tampermonkey",
+    detailStep1Desc: `إذا كان Tampermonkey مثبتاً لديك وتعرف كيفية استخدامه،
+      يمكنك تخطي ذلك إلى <a href="#detail-developer-mode">وضع المطور</a> إذا لزم. وإلا اتبع التالي:`,
+    figTampermonkey: "صورة: تثبيت Tampermonkey",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `انقل إلى 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">رابط متجر Chrome لـ Tampermonkey</a>.`,
+    chromeStep2: "اضغط «Add to Chrome»، ثم أكد بـ «Add extension».",
+    chromeStep3: "بعد التثبيت، يظهر أيقون أسود به دائرتين بيضاوين أعلى يمين.",
+    edgeSubTitle: "Edge",
+    edgeStep1: `افتح 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Tampermonkey في إضافات Edge</a>.`,
+    edgeStep2: "اضغط «Get» أو «Add»، ثم اسمح بالتثبيت.",
+    edgeStep3: "بعدها تحقق من تفعيل Tampermonkey (أيقونة الأحجية أعلى يمين).",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `افتح 
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">صفحة إضافة Tampermonkey</a>.`,
+    firefoxStep2: "اضغط «Add to Firefox»، ثم «Add» في النافذة المنبثقة.",
+    firefoxStep3: "عند اكتمال التثبيت، ستظهر أيقونة Tampermonkey. إن لم تظهر فافحص قائمة الإضافات.",
+    detailStep2: "2. تفعيل وضع المطور",
+    detailStep2Desc: `بعض متصفحات Chromium (Chrome, Edge, Opera) تتطلب تفعيل وضع المطور لتنصيب سكربتات خارجية:`,
+    detailStep2UL1: `في Chrome/Brave/Opera، اذهب إلى <code>chrome://extensions</code> وفعل 
+      <strong>Developer mode</strong> (أعلى اليمين).`,
+    detailStep2UL2: `في Edge، اذهب إلى <code>edge://extensions</code>، فعل <strong>Developer mode</strong> (أسفل اليسار)، 
+      واسمح بملحقات المتاجر الأخرى إن طُلب.`,
+    detailStep2UL3: "لا يحتاج Firefox إلى وضع المطور لـ Tampermonkey أو سكربتات المستخدم.",
+    figDevMode: "صورة: تفعيل وضع المطور في Chrome",
+    detailStep3: "3. تثبيت سكربت Ace Code Claimer",
+    detailStep3Li1: `انقر على الرابط:
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      سيفتح Tampermonkey نافذة "Install script".`,
+    detailStep3Li2: "راجع معلومات السكربت (الاسم، الإصدار، النطاقات) ثم اضغط «Install».",
+    detailStep3Li3: "بعد التثبيت، تحقق من ظهور «Ace Code Claimer» في لوحة Tampermonkey.",
+    figTMInstall: "صورة: نافذة تثبيت Tampermonkey",
+    detailStep4: "4. أعد تشغيل المتصفح",
+    detailStep4Desc: "لأفضل نتيجة، اغلق جميع نوافذ المتصفح وأعد فتحه ليتم تحميل الإضافة والسكربت كاملاً.",
+    detailStep5: "5. افتح Stake.com",
+    detailStep5Li1: `انتقل إلى
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>
+      وسجل دخولك.`,
+    detailStep5Li2: "يضيف السكربت شريطاً صغيراً أو لوحة في أعلى الصفحة؛ سترى زر «Connect» والإعدادات.",
+    detailStep5Li3: "انقر «Connect» للارتباط بخادم الكود. حين تكون الحالة «Connected»، تصبح المطالبة التلقائية جاهزة.",
+    howItWorksTitle: "كيف يعمل",
+    howItWorksDesc: `عند الاتصال، يقوم السكربت بمطالبة أكواد المكافآت تلقائياً عبر WebSocket.
+      إن تم الإعلان عن كود صالح، يطلبه على الفور...`,
+    figInterface: "صورة: واجهة Ace Code Claimer على Stake.com",
+    tipTitle: "نصيحة:",
+    tipDesc: `العديد من الأكواد لديها عدد محدود من الاستخدام (مثلاً أول 1000). حتى مع سكربت تلقائي، قد تنفد فوراً.
+      إنترنت مستقر وزمن استجابة منخفض يساعد.`,
+    troubleTitle: "استكشاف الأخطاء & النصائح",
+    prob1Title: "مشكلة:",
+    prob1Desc: "السكربت لا يظهر أو لا يتصل.",
+    fix1Title: "حل:",
+    fix1Desc: "تأكد من تفعيل Tampermonkey، وفحص VPN/جدار الحماية. جرّب متصفح آخر. عطّل تبويبات النوم.",
+    prob2Title: "مشكلة:",
+    prob2Desc: "Cloudflare Turnstile CAPTCHA تكرر كثيراً.",
+    fix2Title: "حل:",
+    fix2Desc: "حل الكابتشا للمتابعة. إن استمر، ربما تم وضع علامة على IP/المنطقة.",
+    prob3Title: "مشكلة:",
+    prob3Desc: "رسالة «Subscription expired» أو «Banned».",
+    fix3Title: "حل:",
+    fix3Desc: "قد يكون حسابك مقيّداً من جهة الخادم أو Stake. تواصل مع المزوّد أو دعم Stake إن ظننته خطأً.",
+    recommendedSettingsTitle: "إعدادات المتصفح الموصى بها",
+    recommendedSettingsLi1: "استبعد Stake.com من Chrome Memory Saver أو Edge Sleeping Tabs.",
+    recommendedSettingsLi2: "استخدم DNS Cloudflare (1.1.1.1) لبحث أسرع عن النطاقات.",
+    recommendedSettingsLi3: "احرص على فتح علامة تبويب واحدة لـStake.com بهذا السكربت لتفادي التعارض.",
+    finalNote: "استمتع بالمطالبة التلقائية بالأكواد! للمزيد، راجع مطوّر السكربت أو دعم Stake.",
+    detailStep2UL4: "في نفس صفحة الإضافات، ابحث عن <strong>Tampermonkey</strong>، اضغط <em>Details</em>، ثم فعّل&nbsp;<strong>Allow User Scripts</strong>.",
+    figAllowUserScripts: "صورة: تفعيل «Allow User Scripts» في Tampermonkey"
+  },
+
+  /* ===========================
+     11) VIETNAMESE (VI)
+     =========================== */
+  vi: {
+    pageTitle: "Ace Code Claimer – Hướng dẫn Cài đặt Nhanh & Chi tiết",
+    selectLanguageLabel: "Chọn ngôn ngữ:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `Một userscript tiện lợi tự động nhận mã khuyến mãi trên Stake.com. 
+      Hướng dẫn này gồm <em>Cài đặt Nhanh</em> (cho người quen Tampermonkey) và <em>Cài đặt Chi tiết</em> bên dưới. 
+      Kể cả người mới cũng chỉ mất vài phút nếu làm đúng trình tự.`,
+    quickSetupTitle: "Cài đặt Nhanh (Hướng dẫn tóm tắt)",
+    qsStep1: `<strong>Install Tampermonkey</strong> vào trình duyệt. 
+      (<a href="#detail-tampermonkey">Hướng dẫn chi tiết</a>)`,
+    qsStep2: `Bật <strong>Chế độ Nhà phát triển</strong> (nếu Chrome/Edge yêu cầu).
+      (<a href="#detail-developer-mode">Các bước chi tiết</a>)`,
+    qsStep3: `Nhấp vào link script:
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" 
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      Tampermonkey sẽ mở hộp thoại cài đặt; nhấn <em>Install</em>.`,
+    qsStep4: `<strong>Khởi động lại trình duyệt</strong>. Sau đó truy cập 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>.`,
+    qsStep5: `<strong>Kết nối & Tự động nhận:</strong> Khi trang tải, tìm nút “Connect” do script chèn vào. 
+      Nếu chưa tự kết nối, hãy bấm. Tận hưởng việc nhận mã tự động!`,
+    qsNote: `<em>Nếu bất kỳ bước nào chưa rõ, hoặc bạn muốn hướng dẫn chi tiết hơn,
+      xem <strong>chỉ dẫn chi tiết</strong> bên dưới.</em>`,
+    introTitle: "Giới thiệu",
+    introDetail: `<strong>Ace Code Claimer</strong> là một “userscript” nhỏ chạy trong trình duyệt qua Tampermonkey. 
+      Khi bạn vào Stake.com, nó theo dõi mã khuyến mãi và tự động đổi…`,
+    sysReqTitle: "Yêu cầu Hệ thống",
+    sysReqHeaderReq: "Yêu cầu",
+    sysReqHeaderDetails: "Chi tiết",
+    sysReqDesktopTitle: "Máy tính để bàn / Laptop",
+    sysReqDesktopDesc: "Hỗ trợ Windows, macOS, hoặc Linux (không thiết kế cho di động/máy tính bảng).",
+    sysReqBrowserTitle: "Trình duyệt",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, Safari (khuyên dùng bản mới nhất).",
+    sysReqTMTitle: "Tiện ích Tampermonkey",
+    sysReqTMDesc: "Cần thiết để chạy userscript. Xem bước cài đặt chi tiết bên dưới.",
+    sysReqNetTitle: "Kết nối Internet ổn định",
+    sysReqNetDesc: "Kết nối WebSocket quan trọng để nhận mã nhanh.",
+    sysReqStakeTitle: "Tài khoản Stake.com",
+    sysReqStakeDesc: "Bạn phải đăng nhập Stake.com để việc nhận code thành công.",
+    detailInstrTitle: "Hướng dẫn Chi tiết",
+    detailStep1: "1. Cài đặt Tampermonkey",
+    detailStep1Desc: `Nếu bạn đã cài Tampermonkey và biết cách dùng,
+      có thể bỏ qua đến <a href="#detail-developer-mode">Chế độ Nhà phát triển</a> nếu cần. Nếu chưa:`,
+    figTampermonkey: "Hình: Cài đặt Tampermonkey",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `Vào 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chrome Web Store (Tampermonkey)</a>.`,
+    chromeStep2: "Nhấp “Add to Chrome” rồi “Add extension” để xác nhận.",
+    chromeStep3: "Sau khi cài xong, biểu tượng (khối vuông đen với hai chấm trắng) xuất hiện góc phải trên.",
+    edgeSubTitle: "Edge",
+    edgeStep1: `Mở 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Tampermonkey trên Edge Add-ons</a>.`,
+    edgeStep2: "Nhấp “Get” hoặc “Add”, cho phép cài.",
+    edgeStep3: "Sau khi cài, kiểm tra Tampermonkey đã bật (có thể ẩn ở biểu tượng puzzle góc trên).",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `Truy cập 
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">trang Add-on Tampermonkey</a>.`,
+    firefoxStep2: "Nhấp “Add to Firefox”, rồi “Add” để xác nhận.",
+    firefoxStep3: "Sau khi cài, biểu tượng Tampermonkey hiện ra. Nếu không, kiểm tra menu Add-ons.",
+    detailStep2: "2. Bật Chế độ Nhà phát triển",
+    detailStep2Desc: `Một số trình duyệt Chromium (Chrome, Edge, Opera) đòi hỏi bật Developer Mode để cài userscript từ URL ngoài:`,
+    detailStep2UL1: `Chrome/Brave/Opera: vào <code>chrome://extensions</code>, bật 
+      <strong>Developer mode</strong> (góc phải trên).`,
+    detailStep2UL2: `Edge: <code>edge://extensions</code>, bật <strong>Developer mode</strong> (góc trái dưới),
+      cho phép cài extension ngoài.`,
+    detailStep2UL3: "Firefox không cần Chế độ Nhà phát triển cho Tampermonkey/userscripts.",
+    figDevMode: "Hình: Bật Chế độ Nhà phát triển trên Chrome",
+    detailStep3: "3. Cài đặt Script Ace Code Claimer",
+    detailStep3Li1: `Nhấp: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      Tampermonkey sẽ mở “Install script”.`,
+    detailStep3Li2: "Kiểm tra thông tin script (tên, phiên bản, domain) rồi nhấn “Install”.",
+    detailStep3Li3: "Cài xong, hãy kiểm tra “Ace Code Claimer” có trong dashboard Tampermonkey không.",
+    figTMInstall: "Hình: Hộp thoại cài Tampermonkey",
+    detailStep4: "4. Khởi động lại Trình duyệt",
+    detailStep4Desc: "Đóng tất cả cửa sổ rồi mở lại để Tampermonkey và script nạp đầy đủ.",
+    detailStep5: "5. Mở Stake.com",
+    detailStep5Li1: `Đến 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>
+      và đăng nhập.`,
+    detailStep5Li2: "Script sẽ chèn một thanh panel nhỏ phía trên trang. Bạn sẽ thấy nút “Connect” và cài đặt.",
+    detailStep5Li3: "Nhấp “Connect” để liên kết với server nhận code. Trạng thái “Connected” => auto-claim sẵn sàng.",
+    howItWorksTitle: "Cách Hoạt động",
+    howItWorksDesc: `Khi kết nối, script tự động nhận mã khuyến mãi đến qua WebSocket. 
+      Nếu mã hợp lệ, script yêu cầu đổi tức thì…`,
+    figInterface: "Hình: Giao diện Ace Code Claimer trên Stake.com",
+    tipTitle: "Mẹo:",
+    tipDesc: `Nhiều mã bonus giới hạn số lượt (vd: 1000 người đầu). Dù auto, có thể hết ngay tức khắc. 
+      Kết nối mạng ổn định và latency thấp là lợi thế.`,
+    troubleTitle: "Khắc phục Sự cố & Mẹo Nâng cao",
+    prob1Title: "Sự cố:",
+    prob1Desc: "Script không hiển thị hoặc không kết nối.",
+    fix1Title: "Giải pháp:",
+    fix1Desc: "Đảm bảo Tampermonkey đã bật. Kiểm tra firewall/VPN. Thử trình duyệt khác hoặc tắt tab ngủ.",
+    prob2Title: "Sự cố:",
+    prob2Desc: "CAPTCHA Cloudflare Turnstile xuất hiện thường xuyên.",
+    fix2Title: "Giải pháp:",
+    fix2Desc: "Hoàn thành captcha để tiếp tục. Nếu lặp lại, có thể IP/khu vực bị gắn cờ.",
+    prob3Title: "Sự cố:",
+    prob3Desc: "Thông báo “Subscription expired” hoặc “Banned”.",
+    fix3Title: "Giải pháp:",
+    fix3Desc: "Tài khoản có thể bị hạn chế từ server script hoặc phía Stake. Liên hệ nhà phát triển/script hoặc hỗ trợ.",
+    recommendedSettingsTitle: "Cài đặt Trình duyệt Khuyến nghị",
+    recommendedSettingsLi1: "Loại bỏ Stake.com khỏi Chrome Memory Saver/Edge Sleeping Tabs.",
+    recommendedSettingsLi2: "Cân nhắc dùng Cloudflare DNS (1.1.1.1) để phân giải nhanh hơn.",
+    recommendedSettingsLi3: "Chỉ mở một tab Stake.com chạy script để tránh xung đột.",
+    finalNote: "Hãy tận hưởng việc tự động nhận mã! Cần trợ giúp thêm, hãy vào Telegram chính thức hoặc kênh hỗ trợ.",
+    detailStep2UL4: "Vẫn trong trang tiện ích, tìm <strong>Tampermonkey</strong>, nhấp <em>Details</em> và bật&nbsp;<strong>Allow User Scripts</strong>.",
+    figAllowUserScripts: "Hình: Bật “Allow User Scripts” trong Tampermonkey"
+  },
+
+  /* ===========================
+     12) INDONESIAN (ID)
+     =========================== */
+  id: {
+    pageTitle: "Ace Code Claimer – Panduan Pengaturan Cepat & Detail",
+    selectLanguageLabel: "Pilih Bahasa:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `Sebuah userscript praktis yang secara otomatis mengklaim kode bonus di Stake.com. 
+      Panduan ini menawarkan <em>Pengaturan Cepat</em> (bagi yang sudah familiar dengan Tampermonkey) 
+      dan <em>Pengaturan Detail</em> di bawah. Bahkan bagi pemula, hanya butuh beberapa menit mengikuti instruksi.`,
+    quickSetupTitle: "Pengaturan Cepat (Instruksi Singkat)",
+    qsStep1: `<strong>Instal Tampermonkey</strong> di browser Anda.
+      (<a href="#detail-tampermonkey">Panduan detail</a>)`,
+    qsStep2: `<strong>Aktifkan Mode Pengembang</strong> (jika Chrome/Edge memerlukannya).
+      (<a href="#detail-developer-mode">Langkah-langkah detail</a>)`,
+    qsStep3: `Klik tautan script:
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" 
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      Tampermonkey akan membuka dialog instalasi; klik <em>Install</em>.`,
+    qsStep4: `<strong>Restart browser</strong> Anda, lalu kunjungi 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>.`,
+    qsStep5: `<strong>Connect & Klaim Otomatis:</strong> Saat halaman dimuat, cari tombol “Connect” 
+      yang ditambahkan oleh script. Jika belum connect otomatis, klik. Nikmati klaim kode otomatis!`,
+    qsNote: `<em>Jika langkah-langkah ini kurang jelas, atau Anda butuh penjelasan lebih rinci,
+      lihat <strong>instruksi detail</strong> di bawah.</em>`,
+    introTitle: "Pengantar",
+    introDetail: `<strong>Ace Code Claimer</strong> adalah program kecil (sebuah “userscript”) 
+      yang berjalan di browser via Tampermonkey. Ketika Anda mengunjungi Stake.com, 
+      ia memantau kode bonus dan otomatis mengklaimnya…`,
+    sysReqTitle: "Persyaratan Sistem",
+    sysReqHeaderReq: "Persyaratan",
+    sysReqHeaderDetails: "Detail",
+    sysReqDesktopTitle: "Komputer Desktop/Laptop",
+    sysReqDesktopDesc: "Mendukung Windows, macOS, Linux. (Tidak untuk ponsel/tablet).",
+    sysReqBrowserTitle: "Browser",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera, Safari (versi terbaru disarankan).",
+    sysReqTMTitle: "Ekstensi Tampermonkey",
+    sysReqTMDesc: "Diperlukan untuk menjalankan userscript. Lihat langkah pemasangan detail di bawah.",
+    sysReqNetTitle: "Internet Stabil",
+    sysReqNetDesc: "Koneksi WebSocket penting untuk klaim cepat.",
+    sysReqStakeTitle: "Akun Stake.com",
+    sysReqStakeDesc: "Anda harus login di Stake.com agar klaim berhasil.",
+    detailInstrTitle: "Instruksi Detail",
+    detailStep1: "1. Instal Tampermonkey",
+    detailStep1Desc: `Jika Anda sudah punya Tampermonkey dan paham cara pakainya, 
+      bisa lompat ke <a href="#detail-developer-mode">Mode Pengembang</a> jika perlu. Jika tidak:`,
+    figTampermonkey: "Gambar: Instalasi Tampermonkey",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `Pergi ke 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Chrome Web Store (Tampermonkey)</a>.`,
+    chromeStep2: "Klik “Add to Chrome”, lalu konfirmasi “Add extension”.",
+    chromeStep3: "Setelah terinstal, ikon (kotak hitam dengan 2 lingkaran putih) muncul di kanan atas.",
+    edgeSubTitle: "Edge",
+    edgeStep1: `Buka 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Tampermonkey di Edge Add-ons</a>.`,
+    edgeStep2: "Klik “Get” atau “Add”, lalu izinkan instalasi.",
+    edgeStep3: "Setelah terpasang, pastikan Tampermonkey aktif (ikon puzzle di kanan atas jika tersembunyi).",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `Buka 
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">halaman Add-on Tampermonkey</a>.`,
+    firefoxStep2: "Klik “Add to Firefox”, lalu “Add” pada prompt.",
+    firefoxStep3: "Setelah instalasi, ikon Tampermonkey muncul. Jika tidak, cek menu Add-ons.",
+    detailStep2: "2. Aktifkan Mode Pengembang",
+    detailStep2Desc: `Beberapa browser berbasis Chromium (Chrome, Edge, Opera) mungkin butuh Mode Pengembang 
+      untuk menginstal script dari URL eksternal:`,
+    detailStep2UL1: `Chrome/Brave/Opera: buka <code>chrome://extensions</code> dan aktifkan 
+      <strong>Developer mode</strong> (pojok kanan atas).`,
+    detailStep2UL2: `Edge: <code>edge://extensions</code>, nyalakan <strong>Developer mode</strong> (pojok kiri bawah), 
+      izinkan ekstensi dari store lain jika diminta.`,
+    detailStep2UL3: "Firefox tidak perlu Mode Pengembang untuk Tampermonkey/userscripts.",
+    figDevMode: "Gambar: Mengaktifkan Mode Pengembang di Chrome",
+    detailStep3: "3. Instal Script Ace Code Claimer",
+    detailStep3Li1: `Klik:
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      Tampermonkey akan menampilkan dialog “Install script”.`,
+    detailStep3Li2: "Tinjau info (nama, versi, domain) lalu klik “Install”.",
+    detailStep3Li3: "Setelah terinstal, cek di dashboard Tampermonkey apakah ada “Ace Code Claimer”.",
+    figTMInstall: "Gambar: Dialog pemasangan Tampermonkey",
+    detailStep4: "4. Mulai Ulang Browser",
+    detailStep4Desc: "Tutup semua jendela browser lalu buka kembali agar Tampermonkey & script termuat sempurna.",
+    detailStep5: "5. Buka Stake.com",
+    detailStep5Li1: `Arahkan ke 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>, 
+      lalu login akun Anda.`,
+    detailStep5Li2: "Script menambahkan header atau panel kecil (biasanya di atas). Anda lihat tombol “Connect”.",
+    detailStep5Li3: "Klik “Connect” untuk terhubung ke server. Jika status “Connected”, siap klaim otomatis.",
+    howItWorksTitle: "Cara Kerja",
+    howItWorksDesc: `Saat terhubung, script otomatis mengeksekusi klaim untuk kode drop lewat WebSocket. 
+      Kode valid diumumkan => script langsung klaim...`,
+    figInterface: "Gambar: Antarmuka Ace Code Claimer di Stake.com",
+    tipTitle: "Tips:",
+    tipDesc: `Banyak kode bonus memiliki batas penggunaan (mis. 1000 penukaran). 
+      Meski otomatis, bisa habis seketika. Internet stabil & latensi rendah membantu.`,
+    troubleTitle: "Troubleshooting & Tips Lanjutan",
+    prob1Title: "Masalah:",
+    prob1Desc: "Script tidak muncul atau tidak terhubung.",
+    fix1Title: "Solusi:",
+    fix1Desc: "Pastikan Tampermonkey aktif. Periksa firewall/VPN. Coba browser lain atau matikan Sleep Tabs.",
+    prob2Title: "Masalah:",
+    prob2Desc: "Sering muncul CAPTCHA Cloudflare Turnstile.",
+    fix2Title: "Solusi:",
+    fix2Desc: "Selesaikan captcha. Jika berulang, mungkin IP/lokasi Anda ditandai.",
+    prob3Title: "Masalah:",
+    prob3Desc: "Pesan “Subscription expired” atau “Banned”.",
+    fix3Title: "Solusi:",
+    fix3Desc: "Akun dibatasi oleh server script atau Stake. Jika merasa keliru, hubungi penyedia script / Stake.",
+    recommendedSettingsTitle: "Pengaturan Browser yang Disarankan",
+    recommendedSettingsLi1: "Kecualikan Stake.com dari Chrome Memory Saver/Edge Sleeping Tabs.",
+    recommendedSettingsLi2: "Gunakan DNS Cloudflare (1.1.1.1) untuk resolusi nama lebih cepat.",
+    recommendedSettingsLi3: "Buka satu tab Stake.com saja yang menjalankan script untuk hindari konflik.",
+    finalNote: "Nikmati klaim kode bonus otomatis! Jika butuh bantuan, cek Telegram resmi atau saluran dukungan.",
+    detailStep2UL4: "Masih di halaman ekstensi, temukan <strong>Tampermonkey</strong>, klik <em>Details</em> lalu aktifkan&nbsp;<strong>Allow User Scripts</strong>.",
+    figAllowUserScripts: "Gambar: Mengaktifkan “Allow User Scripts” di Tampermonkey"
+  },
+
+  /* ===========================
+     13) HINDI (HI)
+     =========================== */
+  hi: {
+    pageTitle: "Ace Code Claimer – त्वरित और विस्तृत सेटअप गाइड",
+    selectLanguageLabel: "भाषा चुनें:",
+    h1Title: "Ace Code Claimer",
+    introParagraph: `एक सुविधाजनक userscript जो Stake.com पर बोनस कोड अपने आप क्लेम करता है। 
+      यह गाइड Tampermonkey से परिचित लोगों के लिए <em>त्वरित सेटअप</em> और नीचे <em>विस्तृत सेटअप</em> प्रदान करता है। 
+      नए लोगों के लिए भी, इन चरणों का सावधानीपूर्वक पालन करने में कुछ मिनट ही लगेंगे।`,
+    quickSetupTitle: "त्वरित सेटअप (संक्षिप्त निर्देश)",
+    qsStep1: `<strong>Tampermonkey</strong> अपने ब्राउज़र में इंस्टॉल करें.
+      (<a href="#detail-tampermonkey">विस्तृत गाइड</a>)`,
+    qsStep2: `<strong>डेवलपर मोड</strong> इनेबल करें (अगर Chrome/Edge में आवश्यक हो).
+      (<a href="#detail-developer-mode">विस्तृत स्टेप्स</a>)`,
+    qsStep3: `स्क्रिप्ट लिंक पर क्लिक करें: 
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js" target="_blank" rel="noopener">
+      AceCodeClaimer.user.js</a>.
+      Tampermonkey एक इंस्टॉल डायलॉग खोलेगा; <em>Install</em> पर क्लिक करें।`,
+    qsStep4: `<strong>ब्राउज़र को रिस्टार्ट करें</strong>. फिर 
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a> पर जाएँ।`,
+    qsStep5: `<strong>कनेक्ट करें और ऑटो-क्लेम:</strong> पेज लोड होने पर स्क्रिप्ट द्वारा जोड़े गए “Connect” 
+      बटन को देखें। (यदि स्वचालित रूप से कनेक्ट नहीं हुआ हो तो क्लिक करें)। ऑटोमैटिक कोड क्लेम का आनंद लें!`,
+    qsNote: `<em>यदि इनमें से कोई स्टेप स्पष्ट नहीं है, या आपको और अधिक विवरण चाहिए, 
+      नीचे दिए <strong>विस्तृत निर्देशों</strong> को देखें।</em>`,
+    introTitle: "परिचय",
+    introDetail: `<strong>Ace Code Claimer</strong> एक छोटा प्रोग्राम (एक “userscript”) है 
+      जो आपके ब्राउज़र में Tampermonkey के माध्यम से चलता है। जब आप Stake.com पर जाते हैं, 
+      यह बोनस कोड पर नज़र रखता है और उन्हें ऑटोमैटिक रूप से (कई बार इंसान से तेज़) क्लेम कर लेता है...`,
+    sysReqTitle: "सिस्टम आवश्यकताएँ",
+    sysReqHeaderReq: "आवश्यकता",
+    sysReqHeaderDetails: "विवरण",
+    sysReqDesktopTitle: "डेस्कटॉप/लैपटॉप कंप्यूटर",
+    sysReqDesktopDesc: "Windows, macOS, या Linux समर्थित (मोबाइल/टैबलेट के लिए नहीं डिज़ाइन किया गया)।",
+    sysReqBrowserTitle: "ब्राउज़र",
+    sysReqBrowserDesc: "Chrome, Edge, Firefox, Opera या Safari (नई संस्करणों की अनुशंसा)।",
+    sysReqTMTitle: "Tampermonkey एक्सटेंशन",
+    sysReqTMDesc: "Userscript चलाने के लिए आवश्यक। नीचे दिए इंस्टॉल स्टेप्स देखें।",
+    sysReqNetTitle: "स्थिर इंटरनेट",
+    sysReqNetDesc: "WebSocket कनेक्शन तेज़ क्लेमिंग के लिए महत्वपूर्ण है।",
+    sysReqStakeTitle: "Stake.com अकाउंट",
+    sysReqStakeDesc: "कोड क्लेम सफल होने के लिए Stake.com पर लॉग इन होना ज़रूरी है।",
+    detailInstrTitle: "विस्तृत निर्देश",
+    detailStep1: "1. Tampermonkey इंस्टॉल करें",
+    detailStep1Desc: `अगर आपके पास पहले से Tampermonkey है और आप इसका उपयोग जानते हैं, 
+      आवश्यक होने पर <a href="#detail-developer-mode">डेवलपर मोड</a> पर जा सकते हैं। अन्यथा, इन स्टेप्स का पालन करें:`,
+    figTampermonkey: "चित्र: Tampermonkey की स्थापना",
+    chromeSubTitle: "Chrome",
+    chromeStep1: `खोलें: 
+      <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+      target="_blank" rel="noopener">Tampermonkey (Chrome Web Store)</a>.`,
+    chromeStep2: "‘Add to Chrome’ पर क्लिक करें, फिर ‘Add extension’ को कन्फर्म करें।",
+    chromeStep3: "इंस्टॉल के बाद, ऊपर दाईं ओर (काले बॉक्स में दो सफेद सर्कल) आइकन दिखाई देगा।",
+    edgeSubTitle: "Edge",
+    edgeStep1: `जाएँ: 
+      <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd"
+      target="_blank" rel="noopener">Tampermonkey (Edge Add-ons)</a>.`,
+    edgeStep2: "‘Get’ या ‘Add’ पर क्लिक करें, इंस्टॉल की अनुमति दें।",
+    edgeStep3: "इसके बाद Tampermonkey सक्रिय है यह सुनिश्चित करें (ऊपर दाईं ओर puzzle आइकन में)।",
+    firefoxSubTitle: "Firefox",
+    firefoxStep1: `खोलें: 
+      <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/"
+      target="_blank" rel="noopener">Tampermonkey Add-on पेज</a>.`,
+    firefoxStep2: "‘Add to Firefox’ पर क्लिक करें, फिर दिखे डायलॉग में ‘Add’ चुनें।",
+    firefoxStep3: "इंस्टॉल हो जाने के बाद Tampermonkey आइकन दिखाई देगा। न दिखे तो ऐड-ऑन मेन्यू देखें।",
+    detailStep2: "2. डेवलपर मोड सक्षम करें",
+    detailStep2Desc: `कुछ Chromium-आधारित ब्राउज़र (Chrome, Edge, Opera) बाहरी URL से userscripts इंस्टॉल करने के लिए 
+      डेवलपर मोड आवश्यक कर सकते हैं:`,
+    detailStep2UL1: `Chrome/Brave/Opera में <code>chrome://extensions</code> खोलें और 
+      ऊपर दाईं ओर <strong>Developer mode</strong> ऑन करें।`,
+    detailStep2UL2: `Edge में <code>edge://extensions</code> पर जाएँ, नीचे-बाईं ओर <strong>Developer mode</strong> ऑन करें,
+      तथा अन्य स्टोर एक्सटेंशन की अनुमति दें।`,
+    detailStep2UL3: "Firefox में Tampermonkey/userscripts के लिए डेवलपर मोड की आवश्यकता नहीं।",
+    figDevMode: "चित्र: Chrome में डेवलपर मोड सक्षम करना",
+    detailStep3: "3. Ace Code Claimer Script इंस्टॉल करें",
+    detailStep3Li1: `इस लिंक पर क्लिक करें:
+      <a href="https://www.tampermonkey.net/script_installation.php#url=https://storage.googleapis.com/acc_code_claimer/ace_code_claimer.user.js"
+      target="_blank" rel="noopener">AceCodeClaimer.user.js</a>.
+      Tampermonkey “Install script” डायलॉग खोलेगा।`,
+    detailStep3Li2: "स्क्रिप्ट की जानकारी (नाम, संस्करण, डोमेन) देखें और ‘Install’ पर क्लिक करें।",
+    detailStep3Li3: "इंस्टॉल के बाद, Tampermonkey डैशबोर्ड में ‘Ace Code Claimer’ लिस्टेड है या नहीं देखें।",
+    figTMInstall: "चित्र: Tampermonkey इंस्टॉल डायलॉग",
+    detailStep4: "4. ब्राउज़र को रिस्टार्ट करें",
+    detailStep4Desc: "सबसे अच्छे परिणाम के लिए, सभी विंडो बंद करके दोबारा खोलें ताकि Tampermonkey एवं स्क्रिप्ट पूर्ण लोड हो सकें।",
+    detailStep5: "5. Stake.com खोलें",
+    detailStep5Li1: `जाएँ:
+      <a href="https://stake.com" target="_blank" rel="noopener">stake.com</a>
+      और अपने खाते में लॉग इन करें।`,
+    detailStep5Li2: "स्क्रिप्ट पेज के ऊपर छोटा पैनल जोड़ता है, आपको ‘Connect’ बटन और सेटिंग्स दिखेंगी।",
+    detailStep5Li3: "‘Connect’ पर क्लिक कर कोड-क्लेम सर्वर से जुड़ें। स्टेटस ‘Connected’ होने पर ऑटो-क्लेम तैयार है।",
+    howItWorksTitle: "यह कैसे काम करता है",
+    howItWorksDesc: `कनेक्ट होने पर स्क्रिप्ट WebSocket द्वारा आने वाले ड्रॉप कोड को ऑटोमैटिक तरीके से रिडीम करता है।
+      अगर कोई मान्य कोड घोषित होता है, तो तुरन्त आपके लिए क्लेम रिक्वेस्ट भेजता है...`,
+    figInterface: "चित्र: Ace Code Claimer इंटरफ़ेस (Stake.com पर)",
+    tipTitle: "टिप:",
+    tipDesc: `कई बोनस कोड में सीमित उपयोग (जैसे पहले 1000) होता है। भले ही ऑटो-क्लेम हो, कोड झट से खत्म हो सकते हैं। 
+      स्थिर इंटरनेट और कम लेटनसी मददगार होंगे।`,
+    troubleTitle: "समस्या निवारण व उन्नत सुझाव",
+    prob1Title: "समस्या:",
+    prob1Desc: "स्क्रिप्ट दिखाई नहीं दे रहा या कनेक्ट नहीं हो रहा।",
+    fix1Title: "हल:",
+    fix1Desc: "पक्का करें कि Tampermonkey सक्रिय है। फ़ायरवॉल/VPN देखें। दूसरा ब्राउज़र आज़माएँ या Sleep Tabs बंद करें।",
+    prob2Title: "समस्या:",
+    prob2Desc: "Cloudflare Turnstile CAPTCHA बार-बार आ रही है।",
+    fix2Title: "हल:",
+    fix2Desc: "कैप्चा हल करें। बार-बार हो तो IP/क्षेत्र फ्लैग हो सकती है। सर्वर बदलें या सामान्य गतिविधि करें।",
+    prob3Title: "समस्या:",
+    prob3Desc: "“Subscription expired” या “Banned” संदेश।",
+    fix3Title: "हल:",
+    fix3Desc: "संभवतः स्क्रिप्ट सर्वर या Stake द्वारा अकाउंट सीमित है। गलती लग रही हो तो स्क्रिप्ट देव या सपोर्ट से संपर्क करें।",
+    recommendedSettingsTitle: "अनुशंसित ब्राउज़र सेटिंग्स",
+    recommendedSettingsLi1: "Chrome Memory Saver/Edge Sleeping Tabs में Stake.com को बाहर रखें।",
+    recommendedSettingsLi2: "तेज DNS लुकअप के लिए Cloudflare DNS (1.1.1.1) इस्तेमाल करने पर विचार करें।",
+    recommendedSettingsLi3: "टकराव से बचने हेतु, स्क्रिप्ट चलाने वाला केवल एक ही Stake.com टैब खोलें।",
+    finalNote: "ऑटो-क्लेम का आनंद लें! और मदद हेतु डेवलपर के ऑफिशियल टेलीग्राम या सपोर्ट चैनल से जुड़ें।",
+    detailStep2UL4: "उसी एक्सटेंशन पेज पर <strong>Tampermonkey</strong> खोजें, <em>Details</em> पर क्लिक करें और&nbsp;<strong>Allow User Scripts</strong>&nbsp;को ऑन करें।",
+    figAllowUserScripts: "चित्र: Tampermonkey में “Allow User Scripts” सक्षम करना"
+  }
+};
+
+/** 
+ * Document load logic
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const langSelect = document.getElementById("langSelect");
+
+  let currentLang = "en";
+  applyTranslations(currentLang);
+
+  langSelect.value = currentLang;
+
+  langSelect.addEventListener("change", (e) => {
+    const selectedLang = e.target.value;
+    currentLang = selectedLang;
+    applyTranslations(selectedLang);
+  });
+
+  function applyTranslations(lang) {
+    if (translations[lang] && translations[lang].pageTitle) {
+      document.title = translations[lang].pageTitle;
+    }
+    
+    if (lang === 'ar') {
+      document.documentElement.dir = 'rtl';
+    } else {
+      document.documentElement.dir = 'ltr';
+    }
+
+    const elements = document.querySelectorAll("[data-tkey]");
+    elements.forEach((el) => {
+      const key = el.getAttribute("data-tkey");
+      if (translations[lang] && translations[lang][key] !== undefined) {
+        el.innerHTML = translations[lang][key];
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
