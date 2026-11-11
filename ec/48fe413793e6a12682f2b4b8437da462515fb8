@@ -1,0 +1,14 @@
+index.html
+  h_833f23c28ac595 1-2009
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ec48fe413793e6a12682f2b4b8437da462515fb8",
+  "prompts": {},
+  "humans": {
+    "h_833f23c28ac595": {
+      "author": "Gaurav Sharma <gaurav.029.sharma@gmail.com>"
+    }
+  }
+}
